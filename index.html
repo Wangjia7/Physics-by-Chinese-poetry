@@ -1,0 +1,1753 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>高中物理概念古诗五十首</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf6f0;
+  --bg-card: #fffef9;
+  --text: #2d2416;
+  --text-secondary: #6b5e4f;
+  --accent: #b5343a;
+  --accent-light: #d4695a;
+  --gold: #b8956a;
+  --gold-light: #dcc8a8;
+  --border: #e5dccf;
+  --shadow: 0 2px 16px rgba(45,36,22,0.06);
+  --shadow-lg: 0 8px 32px rgba(45,36,22,0.10);
+  --nav-bg: #f2ece0;
+  --nav-hover: #e8dfce;
+  --sidebar-w: 280px;
+  --font-serif: "Noto Serif SC", "STSong", "SimSun", "Songti SC", serif;
+  --font-sans: "Noto Sans SC", "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+[data-theme="dark"] {
+  --bg: #1a1a24;
+  --bg-card: #222230;
+  --text: #e0d8c8;
+  --text-secondary: #a09888;
+  --accent: #d4695a;
+  --accent-light: #e8847a;
+  --gold: #c4a87a;
+  --gold-light: #8a7050;
+  --border: #3a3830;
+  --shadow: 0 2px 16px rgba(0,0,0,0.3);
+  --shadow-lg: 0 8px 32px rgba(0,0,0,0.4);
+  --nav-bg: #1e1e2a;
+  --nav-hover: #2a2a38;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+html { scroll-behavior:smooth; scroll-padding-top: 24px; }
+
+body {
+  font-family: var(--font-sans);
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.8;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--nav-bg);
+  border-right: 1px solid var(--border);
+  overflow-y: auto;
+  z-index: 100;
+  transition: transform 0.3s, background 0.3s;
+  padding: 20px 0;
+}
+
+.sidebar-header {
+  padding: 0 20px 16px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 12px;
+}
+
+.sidebar-header h2 {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--accent);
+  line-height: 1.4;
+}
+
+.sidebar-header .subtitle {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.sidebar-search {
+  padding: 0 16px 12px;
+}
+
+.sidebar-search input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 0.85rem;
+  font-family: var(--font-sans);
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.sidebar-search input:focus {
+  border-color: var(--accent);
+}
+
+.nav-section-title {
+  padding: 10px 20px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-range {
+  font-weight: 400;
+  color: var(--text-secondary);
+  font-size: 0.7rem;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 20px;
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.15s;
+  border-left: 2px solid transparent;
+}
+
+.nav-item:hover {
+  background: var(--nav-hover);
+  color: var(--text);
+  border-left-color: var(--gold);
+}
+
+.nav-item.active {
+  color: var(--accent);
+  font-weight: 500;
+  background: var(--nav-hover);
+  border-left-color: var(--accent);
+}
+
+.nav-num {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  min-width: 20px;
+}
+
+.nav-item.hidden {
+  display: none;
+}
+
+/* Main content */
+.main {
+  margin-left: var(--sidebar-w);
+  padding: 40px 48px;
+  max-width: 900px;
+  transition: margin 0.3s;
+}
+
+/* Top bar */
+.top-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 32px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.section-tabs {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.section-tab {
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  transition: all 0.2s;
+}
+
+.section-tab:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.section-tab.active {
+  background: var(--accent);
+  color: #fff;
+  border-color: var(--accent);
+}
+
+.theme-toggle {
+  width: 38px; height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.theme-toggle:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.mobile-menu-btn {
+  display: none;
+  width: 38px; height: 38px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text);
+  font-size: 1.2rem;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Preface */
+.preface {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 36px 40px;
+  margin-bottom: 40px;
+  box-shadow: var(--shadow);
+}
+
+.preface h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 0.05em;
+}
+
+.preface h2 {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+
+.preface p {
+  text-indent: 2em;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+  line-height: 2;
+  color: var(--text-secondary);
+}
+
+/* Section header */
+.section-header {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin: 40px 0 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid var(--gold-light);
+  letter-spacing: 0.06em;
+}
+
+/* Poem Card */
+.poem-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin-bottom: 24px;
+  box-shadow: var(--shadow);
+  transition: box-shadow 0.3s, transform 0.2s;
+  position: relative;
+  scroll-margin-top: 24px;
+}
+
+.poem-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.poem-card.hidden {
+  display: none;
+}
+
+.poem-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.poem-number {
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  color: var(--accent-light);
+  font-weight: 600;
+}
+
+.poem-title {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  letter-spacing: 0.04em;
+}
+
+.poem-type {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  padding: 2px 10px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  white-space: nowrap;
+}
+
+.poem-body {
+  padding: 20px 24px;
+  margin: 0 -8px 16px;
+  border-left: 3px solid var(--gold-light);
+  background: linear-gradient(90deg, var(--nav-bg) 0%, transparent 100%);
+  border-radius: 0 8px 8px 0;
+}
+
+.poem-line {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  line-height: 2.2;
+  color: var(--text);
+  letter-spacing: 0.03em;
+}
+
+.poem-note {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s;
+  font-size: 0.88rem;
+  line-height: 1.9;
+  color: var(--text-secondary);
+  border-top: 1px dashed var(--border);
+}
+
+.poem-note.open {
+  max-height: 2000px;
+  padding-top: 16px;
+}
+
+.poem-note p {
+  text-indent: 0;
+  margin-bottom: 6px;
+}
+
+.note-label {
+  display: inline-block;
+  font-weight: 600;
+  color: var(--accent);
+  font-size: 0.82rem;
+  margin-right: 4px;
+  padding: 1px 8px;
+  background: var(--nav-bg);
+  border-radius: 4px;
+}
+
+.note-toggle {
+  margin-top: 12px;
+  padding: 6px 16px;
+  border: none;
+  background: transparent;
+  color: var(--accent-light);
+  font-size: 0.82rem;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s;
+}
+
+.note-toggle:hover {
+  color: var(--accent);
+}
+
+.toggle-icon {
+  font-size: 0.65rem;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+
+.toggle-icon.open {
+  transform: rotate(180deg);
+}
+
+/* Scroll to top */
+.scroll-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 44px; height: 44px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  background: var(--bg-card);
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s;
+  z-index: 200;
+}
+
+.scroll-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Progress bar */
+.progress-bar {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--gold));
+  z-index: 300;
+  transition: width 0.1s linear;
+}
+
+/* Overlay for mobile */
+.sidebar-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  z-index: 99;
+}
+
+.sidebar-overlay.open {
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+    width: 280px;
+  }
+  .sidebar.open {
+    transform: translateX(0);
+  }
+  .main {
+    margin-left: 0;
+    padding: 20px 16px;
+  }
+  .mobile-menu-btn {
+    display: flex;
+  }
+  .poem-card {
+    padding: 20px 18px;
+  }
+  .poem-body {
+    padding: 14px 16px;
+    margin: 0 -4px 12px;
+  }
+  .poem-line {
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+  .poem-title {
+    font-size: 1.15rem;
+  }
+  .preface {
+    padding: 24px 20px;
+  }
+  .preface h1 {
+    font-size: 1.5rem;
+  }
+  .section-tabs {
+    gap: 4px;
+  }
+  .section-tab {
+    padding: 4px 10px;
+    font-size: 0.72rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .poem-line {
+    font-size: 0.88rem;
+    line-height: 1.9;
+  }
+  .poem-card {
+    padding: 16px 14px;
+  }
+  .poem-body {
+    padding: 10px 12px;
+  }
+  .preface p {
+    text-indent: 1.5em;
+    font-size: 0.88rem;
+  }
+}
+
+/* Print */
+@media print {
+  .sidebar, .top-bar, .scroll-top, .progress-bar, .note-toggle, .mobile-menu-btn, .theme-toggle {
+    display: none !important;
+  }
+  .main { margin-left: 0; }
+  .poem-note { max-height: none !important; }
+}
+</style>
+</head>
+<body>
+
+<div class="progress-bar" id="progress-bar"></div>
+
+<aside class="sidebar" id="sidebar">
+  <div class="sidebar-header">
+    <h2>物理古诗<br>五十首</h2>
+    <div class="subtitle">格物穷理 · 以诗证道</div>
+  </div>
+  <div class="sidebar-search">
+    <input type="text" id="search-input" placeholder="搜索诗题或内容…" oninput="handleSearch()">
+  </div>
+  <nav id="sidebar-nav">
+    <div class="nav-section-title">力学根基 <span class="nav-range">(1-20)</span></div>
+<a href="#poem-1" class="nav-item" data-num="1" data-section="力学根基"><span class="nav-num">1</span>授速</a>
+<a href="#poem-2" class="nav-item" data-num="2" data-section="力学根基"><span class="nav-num">2</span>初心</a>
+<a href="#poem-3" class="nav-item" data-num="3" data-section="力学根基"><span class="nav-num">3</span>分舟</a>
+<a href="#poem-4" class="nav-item" data-num="4" data-section="力学根基"><span class="nav-num">4</span>逐秒</a>
+<a href="#poem-5" class="nav-item" data-num="5" data-section="力学根基"><span class="nav-num">5</span>守常</a>
+<a href="#poem-6" class="nav-item" data-num="6" data-section="力学根基"><span class="nav-num">6</span>赠还</a>
+<a href="#poem-7" class="nav-item" data-num="7" data-section="力学根基"><span class="nav-num">7</span>功成</a>
+<a href="#poem-8" class="nav-item" data-num="8" data-section="力学根基"><span class="nav-num">8</span>天悬</a>
+<a href="#poem-9" class="nav-item" data-num="9" data-section="力学根基"><span class="nav-num">9</span>八风</a>
+<a href="#poem-10" class="nav-item" data-num="10" data-section="力学根基"><span class="nav-num">10</span>暗争</a>
+<a href="#poem-11" class="nav-item" data-num="11" data-section="力学根基"><span class="nav-num">11</span>两程</a>
+<a href="#poem-12" class="nav-item" data-num="12" data-section="力学根基"><span class="nav-num">12</span>系石</a>
+<a href="#poem-13" class="nav-item" data-num="13" data-section="力学根基"><span class="nav-num">13</span>秋千</a>
+<a href="#poem-14" class="nav-item" data-num="14" data-section="力学根基"><span class="nav-num">14</span>良驹</a>
+<a href="#poem-15" class="nav-item" data-num="15" data-section="力学根基"><span class="nav-num">15</span>拉弓</a>
+<a href="#poem-16" class="nav-item" data-num="16" data-section="力学根基"><span class="nav-num">16</span>时久</a>
+<a href="#poem-17" class="nav-item" data-num="17" data-section="力学根基"><span class="nav-num">17</span>正弦春</a>
+<a href="#poem-18" class="nav-item" data-num="18" data-section="力学根基"><span class="nav-num">18</span>縠纹</a>
+<a href="#poem-19" class="nav-item" data-num="19" data-section="力学根基"><span class="nav-num">19</span>渡河</a>
+<a href="#poem-20" class="nav-item" data-num="20" data-section="力学根基"><span class="nav-num">20</span>换骨</a>
+<div class="nav-section-title">电磁玄机 <span class="nav-range">(21-38)</span></div>
+<a href="#poem-21" class="nav-item" data-num="21" data-section="电磁玄机"><span class="nav-num">21</span>隔空缘</a>
+<a href="#poem-22" class="nav-item" data-num="22" data-section="电磁玄机"><span class="nav-num">22</span>虚空威</a>
+<a href="#poem-23" class="nav-item" data-num="23" data-section="电磁玄机"><span class="nav-num">23</span>高下</a>
+<a href="#poem-24" class="nav-item" data-num="24" data-section="电磁玄机"><span class="nav-num">24</span>窄关</a>
+<a href="#poem-25" class="nav-item" data-num="25" data-section="电磁玄机"><span class="nav-num">25</span>炉红</a>
+<a href="#poem-26" class="nav-item" data-num="26" data-section="电磁玄机"><span class="nav-num">26</span>蓄雷</a>
+<a href="#poem-27" class="nav-item" data-num="27" data-section="电磁玄机"><span class="nav-num">27</span>暗礁</a>
+<a href="#poem-28" class="nav-item" data-num="28" data-section="电磁玄机"><span class="nav-num">28</span>周陲</a>
+<a href="#poem-29" class="nav-item" data-num="29" data-section="电磁玄机"><span class="nav-num">29</span>左手判</a>
+<a href="#poem-30" class="nav-item" data-num="30" data-section="电磁玄机"><span class="nav-num">30</span>不直行</a>
+<a href="#poem-31" class="nav-item" data-num="31" data-section="电磁玄机"><span class="nav-num">31</span>穿线</a>
+<a href="#poem-32" class="nav-item" data-num="32" data-section="电磁玄机"><span class="nav-num">32</span>来拒去留</a>
+<a href="#poem-33" class="nav-item" data-num="33" data-section="电磁玄机"><span class="nav-num">33</span>波未平</a>
+<a href="#poem-34" class="nav-item" data-num="34" data-section="电磁玄机"><span class="nav-num">34</span>铁芯</a>
+<a href="#poem-35" class="nav-item" data-num="35" data-section="电磁玄机"><span class="nav-num">35</span>迟来</a>
+<a href="#poem-36" class="nav-item" data-num="36" data-section="电磁玄机"><span class="nav-num">36</span>荡碧霄</a>
+<a href="#poem-37" class="nav-item" data-num="37" data-section="电磁玄机"><span class="nav-num">37</span>无绳</a>
+<a href="#poem-38" class="nav-item" data-num="38" data-section="电磁玄机"><span class="nav-num">38</span>弯绕</a>
+<div class="nav-section-title">热学之理 <span class="nav-range">(39-41)</span></div>
+<a href="#poem-39" class="nav-item" data-num="39" data-section="热学之理"><span class="nav-num">39</span>三牵</a>
+<a href="#poem-40" class="nav-item" data-num="40" data-section="热学之理"><span class="nav-num">40</span>两路通</a>
+<a href="#poem-41" class="nav-item" data-num="41" data-section="热学之理"><span class="nav-num">41</span>不息</a>
+<div class="nav-section-title">光影之妙 <span class="nav-range">(42-46)</span></div>
+<a href="#poem-42" class="nav-item" data-num="42" data-section="光影之妙"><span class="nav-num">42</span>折腰</a>
+<a href="#poem-43" class="nav-item" data-num="43" data-section="光影之妙"><span class="nav-num">43</span>明镜</a>
+<a href="#poem-44" class="nav-item" data-num="44" data-section="光影之妙"><span class="nav-num">44</span>明暗间</a>
+<a href="#poem-45" class="nav-item" data-num="45" data-section="光影之妙"><span class="nav-num">45</span>狭缝</a>
+<a href="#poem-46" class="nav-item" data-num="46" data-section="光影之妙"><span class="nav-num">46</span>一方向</a>
+<div class="nav-section-title">微观之秘 <span class="nav-range">(47-50)</span></div>
+<a href="#poem-47" class="nav-item" data-num="47" data-section="微观之秘"><span class="nav-num">47</span>红限</a>
+<a href="#poem-48" class="nav-item" data-num="48" data-section="微观之秘"><span class="nav-num">48</span>两立</a>
+<a href="#poem-49" class="nav-item" data-num="49" data-section="微观之秘"><span class="nav-num">49</span>不许停</a>
+<a href="#poem-50" class="nav-item" data-num="50" data-section="微观之秘"><span class="nav-num">50</span>一星火</a>
+
+  </nav>
+</aside>
+
+<div class="sidebar-overlay" id="sidebar-overlay" onclick="closeSidebar()"></div>
+
+<main class="main" id="main-content">
+
+<div class="top-bar">
+  <button class="mobile-menu-btn" onclick="openSidebar()" aria-label="菜单">☰</button>
+  <div class="section-tabs">
+    <button class="section-tab active" data-section="all" onclick="filterSection('all')">全部</button>
+    <button class="section-tab" data-section="力学根基" onclick="filterSection('力学根基')">力学根基</button>
+<button class="section-tab" data-section="电磁玄机" onclick="filterSection('电磁玄机')">电磁玄机</button>
+<button class="section-tab" data-section="热学之理" onclick="filterSection('热学之理')">热学之理</button>
+<button class="section-tab" data-section="光影之妙" onclick="filterSection('光影之妙')">光影之妙</button>
+<button class="section-tab" data-section="微观之秘" onclick="filterSection('微观之秘')">微观之秘</button>
+
+  </div>
+  <button class="theme-toggle" onclick="toggleTheme()" aria-label="切换主题" id="theme-btn">🌙</button>
+</div>
+
+<article class="preface">
+  <h1>高中物理概念古诗五十首</h1>
+  <h2>卷 首 语</h2>
+  <p>物理学与诗，看似分处理性与感性之两极，实则共享同一种目光——对世界运行法则的惊奇与追问。《庄子》云「判天地之美，析万物之理」，此十字既是物理学的方法论，也是诗的美学纲领。</p>
+<p>然而物理教育长期困于一桩吊诡：它以揭示宇宙秩序为使命，其表达方式却常令初学者如堕迷雾。公式与符号筑起的高墙，将无数对自然怀有好奇的心灵挡在门外。于是有了这本小册子——它不增删高中物理考纲中的任何一个概念，只是为它们各换一件衣裳：把 F=ma 藏进风推落叶的疾徐中，把楞次定律写入磁来磁去的来回博弈，把波粒二象性寄于「时如波浪时如尘」的感叹。五十个核心概念，五十首古典诗歌，一一对应，无一遗漏。</p>
+<p>这当然不是严谨的物理教材，也无意取代任何一道习题。它是一架便桥——让在题海中疲惫的学生，在吟诵中重新遇见物理，发现那些被公式遮蔽的美感与秩序；它也是一次实验——证明中国文化传统完全有能力与西方现代科学深度对话，而非仅能供奉于国学的神龛。</p>
+<p>体例上，每首标注诗体，诗后附注。注分三层：先做整体赏析，再拆解诗中暗藏的物理过程，末了逐句点评。这样安排，给喜欢读诗的人以文学鉴赏的入口，也给需要备考的人以检索概念的线索。</p>
+<p>概念排序以高中物理考纲（人教版新课标）为核心参照，按力学、电磁学、热学、光学、近代物理五大板块及高考考查权重综合排列。前五十首为最重要者，若读者反应良好，后续可补充其余概念。</p>
+<p>是为序。</p>
+<p>---</p>
+
+</article>
+
+<div class="section-header" id="sec-力学根基">卷一 · 力学根基（第1—20首）</div>
+
+    <article class="poem-card" id="poem-1" data-section="力学根基" data-num="1">
+      <div class="poem-header">
+        <span class="poem-number">第一首</span>
+        <h3 class="poem-title">授速</h3>
+        <span class="poem-type">五言律诗</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">物性安能改，非因力不迁。</p>
+<p class="poem-line">疾徐随所授，轻重定其缘。</p>
+<p class="poem-line">叶逐风来急，山当浪打坚。</p>
+<p class="poem-line">天工无厚薄，数理自昭然。</p>
+
+      </div>
+      <div class="poem-note" id="note-1">
+        <p>此诗以力、质量与加速度三者关系为内核，取「风推叶疾、浪撼山坚」为象，暗喻同一力下质量异则变速异。<span class="note-label">整体赏析</span>全诗以「物性」起笔，点出惯性本底；中二联一写因果（力定疾徐、质分轻重），一写验证（叶轻易逐、山重难移）；尾联收于自然规律的公正性与数学确定性，有格物致知的庄严感。<span class="note-label">物理过程拆解</span>首联铺垫——物体无外力则状态不变；颔联写F=ma的逻辑——加速度因力而生、因质而限；颈联给出两个极限案例：轻者（叶）受风力加速度大，重者（山）受力难动。尾联升华——F=ma不偏不倚，万物同此理。<span class="note-label">逐句赏析</span>「物性安能改」五字即惯性暗示，平实中藏机锋；「疾徐随所授」赋加速度以被动性——非自生，乃「授」也；「轻重定其缘」之「缘」字妙，将质量写成一种宿命般的禀赋；颈联对仗工稳，「急」与「坚」收得有力，证明同一力在不同质量上判若云泥。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(1)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-2" data-section="力学根基" data-num="2">
+      <div class="poem-header">
+        <span class="poem-number">第二首</span>
+        <h3 class="poem-title">初心</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">沧海桑田几度迁，云腾雨落复归川。</p>
+<p class="poem-line">纵将万象焚成烬，算取初心未改弦。</p>
+
+      </div>
+      <div class="poem-note" id="note-2">
+        <p>此诗以自然界的水循环与物质转化喻能量守恒——虽形变万千，总量不易。<span class="note-label">整体赏析</span>「沧海桑田」开篇即立宏阔的时空尺度，暗示能量在漫长岁月中流转不息；「云腾雨落」是地球水循环，亦是能量形态连续转化的缩影；末二句以焚烧的极端意象设问——即使万物化为灰烬，能量赋形虽改，总数不增不减，一如弦上初音未变。<span class="note-label">物理过程拆解</span>首句对应势能→动能→内能等宏观转化链；次句对应能量在相变（蒸发、降水）中的守恒传递；三句指向化学能→热能→光能的释放过程；末句点出守恒本质——「初心」即系统总能量，「未改弦」即不增不减。<span class="note-label">逐句赏析</span>「几度迁」的时间纵深与「复归川」的空间循环构成守恒的双重意涵；「焚成烬」三字极具破坏性画面，恰以极致反衬守恒之不渝；「算取初心」将能量守恒提升至哲学高度，使人想到赫拉克利特之火与拉瓦锡之天平。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(2)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-3" data-section="力学根基" data-num="3">
+      <div class="poem-header">
+        <span class="poem-number">第三首</span>
+        <h3 class="poem-title">分舟</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">孤舟推桨两分程，你向西时我向东。</p>
+<p class="poem-line">莫问去来谁得利，乘除之后一般同。</p>
+
+      </div>
+      <div class="poem-note" id="note-3">
+        <p>此诗以船与桨的分离运动暗喻动量守恒——系统不受外力时，内部相互作用不改变总动量。<span class="note-label">整体赏析</span>取泛舟湖上推桨离船这一日常场景，将其转化为物理定律的生动寓言。首句设境，次句写分离方向相反，三句以问句挑起悬念，末句给出守恒的答案，语调从追问归于释然。<span class="note-label">物理过程拆解</span>船与桨原为一体（系统初动量为零），推开后各自反向运动，各自动量大小相等、方向相反，合动量仍为零。末句「乘除之后一般同」指向动量矢量和的守恒本质。<span class="note-label">逐句赏析</span>「两分程」之「程」兼有路程与程量（动量）之意，暗藏机锋；「你向西时我向东」明白如话，却是动量矢量性的精彩表述；「乘除之后」以日常算术喻物理定律，化艰深为平易，末字「同」以四两拨千斤之势收束全篇。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(3)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-4" data-section="力学根基" data-num="4">
+      <div class="poem-header">
+        <span class="poem-number">第四首</span>
+        <h3 class="poem-title">逐秒</h3>
+        <span class="poem-type">五言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">逐秒添同速，初行慢后奔。</p>
+<p class="poem-line">半程需中值，三段有公论。</p>
+
+      </div>
+      <div class="poem-note" id="note-4">
+        <p>此诗以「逐秒等增」为核心意象，概括匀变速直线运动的速度公式、位移公式及推论。<span class="note-label">整体赏析</span>语言简练近乎口诀，却准确地抓住了匀变速运动的三大特征——速度均匀变化、位移与时间平方成正比、中间时刻速度等于平均速度。<span class="note-label">物理过程拆解</span>「逐秒添同速」对应Δv/Δt=常量，即加速度a恒定；「初行慢后奔」写出速度线性增长的过程画面；「半程需中值」指向推论：匀变速运动中中间时刻的瞬时速度等于全程平均速度；「三段有公论」暗指初速为零时连续相等时间内的位移比为1:3:5。<span class="note-label">逐句赏析</span>首句将Δv=a·Δt的时间离散化为「逐秒」，降低理解门槛；「慢后奔」三字兼具韵律与动态描摹，令人仿佛看见物体渐行渐疾；末句「公论」二字为全诗注入理性力量，点出自然规律的普适性。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(4)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-5" data-section="力学根基" data-num="5">
+      <div class="poem-header">
+        <span class="poem-number">第五首</span>
+        <h3 class="poem-title">守常</h3>
+        <span class="poem-type">七言律诗</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">万物天成各有神，安于故态是前身。</p>
+<p class="poem-line">舟行止水非风定，马骋平原赖策频。</p>
+<p class="poem-line">静者自甘长守静，奔时未肯便回轮。</p>
+<p class="poem-line">若无一力来惊破，天地悠悠永夙因。</p>
+
+      </div>
+      <div class="poem-note" id="note-5">
+        <p>此诗以多重自然意象层层铺展惯性的本质——物体在不受外力时保持静止或匀速直线运动状态。<span class="note-label">整体赏析</span>全诗气韵悠长，以「万物有神」起兴，赋予惯性一种近乎哲学本体论的地位。中二联以舟马设喻，排比工整；尾联上升到天地悠悠的宇宙尺度，将惯性从实验室带入时空深处。<span class="note-label">物理过程拆解</span>「安于故态」即物体维持原有运动状态之天性；颔联写两种情形：水面之舟若无持续风力将渐停（实际含摩擦），平原之马需策鞭不停——实际场景中隐含了「若无摩擦则运动不止」的理想实验逻辑；颈联正反对照——静者恒静、动者不止；尾联「一力来惊破」是状态改变的唯一条件，这正是牛顿第一定律的完整表述。<span class="note-label">逐句赏析</span>「各有神」三字赋予物理规律以生命感，中国古典诗学中的「神理」传统在此与科学精神会通；「安于故态是前身」化用禅宗语式，令惯性带上了悟道意味；尾联「天地悠悠永夙因」将定律拉伸至宇宙尺度，读之令人肃然。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(5)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-6" data-section="力学根基" data-num="6">
+      <div class="poem-header">
+        <span class="poem-number">第六首</span>
+        <h3 class="poem-title">赠还</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">推门手痛门推手，踏地方成地踏功。</p>
+<p class="poem-line">你若赠人三寸力，人还你处不偏丰。</p>
+
+      </div>
+      <div class="poem-note" id="note-6">
+        <p>此诗以推门与踏地两个日常动作为线索，写作用力与反作用力大小相等、方向相反、作用在不同物体上。<span class="note-label">整体赏析</span>全诗用近乎白话的语言，将物理定律融入身体经验。首句以「推门手痛」的切身感受建立直观理解；次句「踏地方成」揭示反作用力是行走之因；末二句以赠还与公平的伦理隐喻，写出作用力与反作用力的对称之美。<span class="note-label">物理过程拆解</span>手对门施加力→门对手施加等大反向的力（手痛即此力的效果）；脚向下后方蹬地→地面给脚向前上方的反作用力，使人前行。「不偏丰」即两力大小严格相等，不差分毫。<span class="note-label">逐句赏析</span>首句以「手痛」调动读者身体记忆，物理不再是抽象的公式而是活生生的经验；「踏地方成地踏功」七字暗藏玄机——常人以为走路是「踏地向前」，实则是地被踏后还你一个向前的力；「赠」与「还」的伦理隐喻，巧妙将自然界的铁律比拟为人间公道，读来既亲切又凛然。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(6)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-7" data-section="力学根基" data-num="7">
+      <div class="poem-header">
+        <span class="poem-number">第七首</span>
+        <h3 class="poem-title">功成</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">功夫到处速添增，初末差分力所凭。</p>
+<p class="poem-line">一路推来多少力，尽将辛苦换奔腾。</p>
+
+      </div>
+      <div class="poem-note" id="note-7">
+        <p>此诗以「功夫」双关（既是辛劳也是物理量功）开篇，写合外力做功等于动能变化。<span class="note-label">整体赏析</span>全诗以人的劳动体验映射抽象的物理过程——将「做功」还原为推车、拉磨等切身经验，将「动能变化」还原为从慢到快的直观感受。<span class="note-label">物理过程拆解</span>「功夫到处」即力在位移上的累积（W=Fs cosθ）；「速添增」是速度变大即动能增大；「初末差分」即ΔEₖ=Eₖ₂-Eₖ₁；「力所凭」点明功是动能变化之因；末句「辛苦换奔腾」是对W=ΔEₖ的诗意翻译。<span class="note-label">逐句赏析</span>首句「功夫」的双关是全诗的文眼——在中文语境中「功夫」既是时间与精力的付出（功），也暗示此为「功」的物理概念；「辛苦换奔腾」五字以农耕文明的朴素价值取向，将物理定律写成了一则关于付出与回报的寓言。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(7)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-8" data-section="力学根基" data-num="8">
+      <div class="poem-header">
+        <span class="poem-number">第八首</span>
+        <h3 class="poem-title">天悬</h3>
+        <span class="poem-type">七言律诗</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">天悬日月地悬人，万物相亲各有因。</p>
+<p class="poem-line">远近平方分厚薄，重轻乘积定疏亲。</p>
+<p class="poem-line">潮随月魄宵宵涨，果坠枝头岁岁陈。</p>
+<p class="poem-line">一自牛郎窥破后，乾坤无处不遵循。</p>
+
+      </div>
+      <div class="poem-note" id="note-8">
+        <p>此诗以日月星辰与人间万物的相互吸引为经纬，暗写万有引力定律F=Gm₁m₂/r²。<span class="note-label">整体赏析</span>首联以宏阔的宇宙图景开篇，将引力定为「万物相亲」的宇宙纽带；颔联精确点出平方反比（距离）与质量乘积两个关键变量；颈联以潮汐与落果一宏一微两个引力效应的经典例证充实画面；尾联以牛顿发现引力定律的典故收束，赋予科学发现以「窥破天机」的庄严感。<span class="note-label">物理过程拆解</span>首联「万物相亲」即任意两物体间均存在引力；颔联「远近平方分厚薄」——引力与距离平方成反比，「重轻乘积定疏亲」——引力与两质量乘积成正比；颈联两例：潮汐是月球引力对地球水体的效果，苹果落地是地球引力对近地物体的效果；尾联点出万有引力定律的普适性。<span class="note-label">逐句赏析</span>「天悬日月地悬人」一个「悬」字写出万物被引力维系于轨道的宇宙图景；「远近平方分厚薄」将数学关系写入诗句而毫无生硬之感；「潮随月魄宵宵涨」以「月魄」代月球，赋予引力以诗性的神秘；「一自牛郎窥破后」以神话人物暗指牛顿，巧妙融合中西文化记忆。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(8)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-9" data-section="力学根基" data-num="9">
+      <div class="poem-header">
+        <span class="poem-number">第九首</span>
+        <h3 class="poem-title">八风</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">三绳拽住一根桩，各向西东南北方。</p>
+<p class="poem-line">力气相消归静处，任它八面有风狂。</p>
+
+      </div>
+      <div class="poem-note" id="note-9">
+        <p>此诗以拔河或牵桩为意象，描绘共点力作用下物体保持静止的条件——合力为零。<span class="note-label">整体赏析</span>首句以「三绳拽桩」建立一个生动的力学模型，次句写各力方向各异，三句点破平衡的奥秘——力矢量相加为零，末句以「八面风狂」的极端情境衬托平衡的稳定性。<span class="note-label">物理过程拆解</span>物体受多个力作用而静止→各力的矢量和为零→任意方向上的分力和均为零。三绳拽桩的模型中，三力构成封闭的矢量三角形。<span class="note-label">逐句赏析</span>「拽」字力道十足，将抽象的力具象为可以触摸的牵拉；「各向西东南北方」以方位词代方向角，化向量分解为空间直觉；「力气相消归静处」中「相消」与「归静」构成因果链条，清晰而从容；末句「八面风狂」与「静」形成强烈对比，以动衬静，倍增安定之感。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(9)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-10" data-section="力学根基" data-num="10">
+      <div class="poem-header">
+        <span class="poem-number">第十首</span>
+        <h3 class="poem-title">暗争</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两物相挨暗起争，欲行还阻力横生。</p>
+<p class="poem-line">若非此君常作梗，人间寸步也难成。</p>
+
+      </div>
+      <div class="poem-note" id="note-10">
+        <p>此诗写摩擦力的双重性——既是运动的阻碍者，也是行走与车辆行驶的必要条件。<span class="note-label">整体赏析</span>前两句描绘摩擦力作为阻力的面貌——两表面接触时微观的不平整造成「暗争」；后两句笔锋一转，揭示摩擦力作为驱动力的另一面——没有它，鞋底打滑、车轮空转，寸步难行。<span class="note-label">物理过程拆解</span>「暗起争」指接触面微观凹凸的机械啮合与分子引力；「欲行还阻」写滑动摩擦力的方向与相对运动方向相反；末二句揭示静摩擦力是行走和车辆驱动的物理基础——人向后蹬地，地面给人向前的静摩擦力。<span class="note-label">逐句赏析</span>「暗起争」三字以小见大，将分子尺度的相互作用凝练为戏剧性的「争斗」；「若」字领起的假设句式制造了认知张力——读者先已接受「摩擦即阻力」的日常经验，突然被反问打醒，恍悟摩擦之必要；全诗四句如同一则微型的辩证法讲义，正反合三层结构清晰而自然。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(10)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-11" data-section="力学根基" data-num="11">
+      <div class="poem-header">
+        <span class="poem-number">第十一首</span>
+        <h3 class="poem-title">两程</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">横飞直落两般程，一似飘蓬一似星。</p>
+<p class="poem-line">看似各奔前后路，合成弧线最分明。</p>
+
+      </div>
+      <div class="poem-note" id="note-11">
+        <p>此诗以「横飞」与「直落」两个独立维度写平抛运动的分解与合成——水平匀速直线运动与竖直自由落体的叠加形成抛物线轨迹。<span class="note-label">整体赏析</span>首句直陈两个方向上的运动各自独立；次句以「飘蓬」喻水平方向的匀速（如蓬草随风平移），以「星」喻竖直方向的加速下落（如流星坠地）；三句以「各奔前后路」暗示运动的独立性与可分解性；末句以「合成弧线」收束，点出平抛运动的轨迹是一条优美的抛物线。<span class="note-label">物理过程拆解</span>水平方向：初速v₀，不受力，匀速直线运动 x=v₀t；竖直方向：初速为零，受重力，自由落体 y=½gt²。两者叠加形成抛物线轨迹y=(g/2v₀²)x²。「看似各奔」描述的是分解视角，「合成弧线」则是实际的运动轨迹。<span class="note-label">逐句赏析</span>「两般程」以「程」字双关——既是路程也是「规程」；「一似飘蓬一似星」以自然物象为喻，蓬之平移与星之疾坠形成速度感与方向感的鲜明对照；末二句揭示物理分析的核心方法——分解与合成，由分而合的认识逻辑暗合《易经》「分而为二以象两」的思维传统。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(11)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-12" data-section="力学根基" data-num="12">
+      <div class="poem-header">
+        <span class="poem-number">第十二首</span>
+        <h3 class="poem-title">系石</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">系石飞旋绳紧绷，欲逃不得绕中心。</p>
+<p class="poem-line">若非一股牵回力，早作离弦箭远寻。</p>
+
+      </div>
+      <div class="poem-note" id="note-12">
+        <p>此诗以绳系石旋转为象，写圆周运动中向心力维持轨道、速度方向不断改变的本质。<span class="note-label">整体赏析</span>首句「系石飞旋」是经典的物理实验场景，「绳紧绷」暗示力的存在；次句「欲逃不得」生动写出速度方向随时趋向切线方向却被拉回的矛盾；三句点出「牵回力」即向心力；末句以「离弦箭」的比喻说明一旦向心力消失，物体将沿切线飞出。<span class="note-label">物理过程拆解</span>物体做圆周运动时，速度方向时刻改变→必存在加速度→必有力的作用；向心力F=mv²/r，方向始终指向圆心，与速度方向垂直，只改变速度方向不改变速度大小；若向心力消失，物体以此刻的速度沿切线方向做匀速直线运动。<span class="note-label">逐句赏析</span>「系石飞旋」四字兼具实验的精确性与童玩的亲切感；「欲逃不得」将惯性与向心力的对抗戏剧化——石「欲」沿切线飞去（惯性使然），绳「不」让（向心力约束）；「牵回力」的「牵」字准确而温柔——向心力不是强硬地「拉」，而是持续地「牵」；末句「离弦箭」是圆周运动教学的经典比喻，入诗后读来依然警策。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(12)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-13" data-section="力学根基" data-num="13">
+      <div class="poem-header">
+        <span class="poem-number">第十三首</span>
+        <h3 class="poem-title">秋千</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">荡索秋千起落频，最高停驻最低奔。</p>
+<p class="poem-line">势增动减相交替，总量无亏是夙根。</p>
+
+      </div>
+      <div class="poem-note" id="note-13">
+        <p>此诗以秋千为象，写只有重力（或弹力）做功的系统中动能与势能相互转化而总量不变。<span class="note-label">整体赏析</span>首句以「荡索秋千」的日常经验建立情境，「起落频」暗示往复运动；次句「最高停驻」是势能最大动能为零的时刻，「最低奔」是动能最大势能最小的时刻；三句以「势增动减相交替」精炼概括能量转化的动态过程；末句以「总量无亏」写入守恒律。<span class="note-label">物理过程拆解</span>秋千摆动中，上升过程：动能→重力势能，速度减小、高度增加；下降过程：重力势能→动能，高度降低、速度增大。若忽略空气阻力与悬挂处摩擦，Eₖ+Eₚ=常量。<span class="note-label">逐句赏析</span>「最高停驻」四字宛如慢镜头——那一瞬间的静止是动能为零的绝佳写照；「最低奔」中「奔」字将动能最大的时刻写得酣畅淋漓；「势增动减相交替」七字即Eₖ+Eₚ=c的完整动态描述，严谨而富有节奏；「夙根」与「总量无亏」相呼应，赋予守恒定律以本源性的哲学意味。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(13)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-14" data-section="力学根基" data-num="14">
+      <div class="poem-header">
+        <span class="poem-number">第十四首</span>
+        <h3 class="poem-title">良驹</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">搬山填海费工夫，出力还看快慢殊。</p>
+<p class="poem-line">一日搬完称大力，半时搬完是良驹。</p>
+
+      </div>
+      <div class="poem-note" id="note-14">
+        <p>此诗以搬运重物的劳动场景区分功与功率——功衡量做了「多少」，功率衡量做得「多快」。<span class="note-label">整体赏析</span>全诗以朴素的劳动比喻化解物理概念的抽象性。首句「搬山填海」极言做功之大；次句「快慢殊」引入时间维度，由此导出功率概念；末二句以同一功量、不同用时作对比——做的功相同，用时短者功率大。<span class="note-label">物理过程拆解</span>W=Fs（力×力的方向上的位移），衡量能量转化的多少；P=W/t，衡量能量转化的快慢。同一功量，时间减半则功率翻倍。「搬山填海」是等功量的比喻——若不同的完成时间，则对应不同的功率。<span class="note-label">逐句赏析</span>「搬山填海」以夸张的工程意象写功之大，虽非写实却准确地传达了功的量纲感（力×距离）；「快慢殊」三字豁然引入时间变量，是全诗的「转」笔；「大力」与「良驹」的对比不以数值而以形象的判断收束，既通俗又留有思考余地。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(14)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-15" data-section="力学根基" data-num="15">
+      <div class="poem-header">
+        <span class="poem-number">第十五首</span>
+        <h3 class="poem-title">拉弓</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">竹弓拉满力回增，一寸伸长一寸憎。</p>
+<p class="poem-line">待到放弦归旧态，方知弹性本来能。</p>
+
+      </div>
+      <div class="poem-note" id="note-15">
+        <p>此诗以拉弓为象，写弹簧（弹性体）的弹力与形变量成正比的线性关系。<span class="note-label">整体赏析</span>首句「竹弓拉满」建立场景，「力回增」写形变越大回弹之力越大；次句「一寸伸长一寸憎」以拟人笔法写出F=-kx中的线性关系——每多拉一寸，弹力就同比增加一分；末二句写释放后恢复原状的弹性势能释放过程。<span class="note-label">物理过程拆解</span>在弹性限度内，弹簧弹力F=kx（大小与形变量成正比，方向与形变方向相反）。拉弓过程：手做功→弹性势能储存于弓体中；放弦过程：弹性势能→箭的动能。<span class="note-label">逐句赏析</span>「憎」字的拟人化处理是全诗最大的妙笔——将弹力写成一种「不情愿」的情绪，F=-kx中的负号（方向相反）由此获得了情感色彩；「一寸」重复出现构成句内对仗，以重复强化线性关系的直观感受；「弹性本来能」五字点出势能储于形变之中这一关键理解。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(15)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-16" data-section="力学根基" data-num="16">
+      <div class="poem-header">
+        <span class="poem-number">第十六首</span>
+        <h3 class="poem-title">时久</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">一脚踢球球去远，力虽短暂效分明。</p>
+<p class="poem-line">功夫深浅看时久，动量增减在此营。</p>
+
+      </div>
+      <div class="poem-note" id="note-16">
+        <p>此诗以踢球的瞬间接触写冲量（力在时间上的累积）与动量变化的关系——I=Ft=Δp。<span class="note-label">整体赏析</span>首句以球场上最直观的「力×时间」案例开篇——脚与球的接触时间极短，但效果显著；次句「力虽短暂」点出冲量中的时间因素；三句「看时久」暗示同等力下作用时间越长动量改变越大；末句以「动量增减在此营」句收束，将定理浓缩为一句。<span class="note-label">物理过程拆解</span>冲量I=F·Δt，是力对时间的累积效应；动量定理：合外力的冲量等于物体动量的变化量，I=Δp=mv₂-mv₁；踢球时脚对球的力在短暂接触时间内产生的冲量，使球从静止获得速度。<span class="note-label">逐句赏析</span>「一脚踢球」的选象精准而亲切——它几乎是每个中国学生都能瞬间调用的身体记忆；「力虽短暂效分明」暗含一个认知突破——效果不只看力的大小，还要看作用时间，这正是冲量概念超越日常直觉之处；「营」字以军事意象隐喻动量变化发生的「阵地」，别出心裁。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(16)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-17" data-section="力学根基" data-num="17">
+      <div class="poem-header">
+        <span class="poem-number">第十七首</span>
+        <h3 class="poem-title">正弦春</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">钟摆摇摇往复频，偏离愈远力回嗔。</p>
+<p class="poem-line">去来等速中间过，一曲正弦写尽春。</p>
+
+      </div>
+      <div class="poem-note" id="note-17">
+        <p>此诗以单摆为象，写简谐运动的回复力与位移成正比反向、位移随时间呈正弦变化的本质特征。<span class="note-label">整体赏析</span>首句以钟摆建立形象；次句「偏离愈远力回嗔」写F=-kx的回复力特征——偏离平衡位置越远，回复力越大且方向总指向平衡位置；三句写平衡位置处速度最大；末句以「一曲正弦」收束，点出简谐运动的数学本质，将物理与数学之美熔于一炉。<span class="note-label">物理过程拆解</span>简谐运动的动力学条件：回复力F=-kx；运动学特征：x=A sin(ωt+φ)，位移随时间呈正弦（或余弦）变化；平衡位置处x=0，F=0，v最大；最大位移处x=A，F最大，v=0。<span class="note-label">逐句赏析</span>「摇摇往复」四叠字模拟摆动的节奏感；「嗔」字一如前诗「憎」字，将回复力的方向性写入情感——偏离了就要「嗔怪」着把你拉回去；「一曲正弦写尽春」将三角函数图像与春日意象结合，令数学之美在诗境中绽放，「春」字收得轻盈而余韵悠长——正弦曲线的起伏正是春天的波形。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(17)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-18" data-section="力学根基" data-num="18">
+      <div class="poem-header">
+        <span class="poem-number">第十八首</span>
+        <h3 class="poem-title">縠纹</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">投石平湖起縠纹，一环推着一环奔。</p>
+<p class="poem-line">水珠只在原处颤，波却悠悠万里魂。</p>
+
+      </div>
+      <div class="poem-note" id="note-18">
+        <p>此诗以水面投石为象，写机械波的本质——介质质点只在平衡位置附近振动，而振动形式和能量向外传播。<span class="note-label">整体赏析</span>首句「投石平湖」是经典的波源激发的意象；次句「一环推一环」写出波的传播方式——近邻质点依次带动；三句是全诗的关键突破——「水珠只在原处颤」揭示介质质点不随波迁移；末句以「万里魂」写波动形式与能量的长距离传播，魂与身的对照暗合「波传形、质不动」的深层物理。<span class="note-label">物理过程拆解</span>波是振动在介质中的传播；横波中质点振动方向与波传播方向垂直；波传播的是振动形式和能量，介质质点并不随波前进；波速v=λf=λ/T。<span class="note-label">逐句赏析</span>「縠纹」即绉纱般的细纹，状水面横波之形，用字古雅精准；「一环推着一环」以连环传递的动态画面取代抽象描述，是「直观教学」的诗学版本；「水珠只在原处颤」是全诗的认知转折——读者至此才从「波在前进」的错觉中醒悟；「魂」字是全诗之眼——波是「魂」（信息与能量的载体），而质点只是「身」，魂游千里而身守原地。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(18)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-19" data-section="力学根基" data-num="19">
+      <div class="poem-header">
+        <span class="poem-number">第十九首</span>
+        <h3 class="poem-title">渡河</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">渡河横楫水斜冲，看似偏流实正中。</p>
+<p class="poem-line">智者分途观两向，合来方识本来踪。</p>
+
+      </div>
+      <div class="poem-note" id="note-19">
+        <p>此诗以小船渡河为经典案例，写运动的矢量合成与分解——一个复杂运动可以看作几个独立分运动的叠加。<span class="note-label">整体赏析</span>首句设小船横渡而水流斜冲的情景；次句「看似偏流实正中」揭示观察者看到的合运动与各分运动之间的关系；三句写分析的方法论——「分途观两向」即沿相互垂直的方向分解运动；末句以「合来方识」收束，点出合与分是认知运动的两个互补视角。<span class="note-label">物理过程拆解</span>小船渡河：船对水的速度（横渡方向）+ 水对岸的速度（沿河方向）= 船对岸的合速度（斜向）。分运动之间互不影响（运动的独立性原理）。位移、速度、加速度均为矢量，满足平行四边形法则。<span class="note-label">逐句赏析</span>「看似偏流实正中」以视觉错觉引入思考——你以为船在偏，实则是两种运动的合效果；「智者分途」赋予运动分解以方法论的价值——分不是任意的，而是一种智慧的选择（沿正交方向）；「合来方识本来踪」暗合笛卡尔坐标分解与矢量合成的思想——先分后合，方能抵达对运动的完整认识。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(19)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-20" data-section="力学根基" data-num="20">
+      <div class="poem-header">
+        <span class="poem-number">第二十首</span>
+        <h3 class="poem-title">换骨</h3>
+        <span class="poem-type">七言律诗</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两球相撞各西东，一霎之间换骨风。</p>
+<p class="poem-line">轻者如蓬飘愈远，重者似岳动微躬。</p>
+<p class="poem-line">动量守处分毫不，动能若失化热烘。</p>
+<p class="poem-line">万物相逢皆此理，算来天地一枰中。</p>
+
+      </div>
+      <div class="poem-note" id="note-20">
+        <p>此诗以两球碰撞为象，涵盖弹性碰撞与非弹性碰撞的动量守恒与动能变化。<span class="note-label">整体赏析</span>首联写碰撞瞬间的戏剧性场景，「换骨风」以武侠语汇写力的相互作用；颔联以质量差异写碰撞后的速度分配——轻者速度变化大、重者变化小；颈联是全诗的物理核心——上句写动量守恒的严格性（「分毫不」差），下句写非完全弹性碰撞中的动能损失（转化为内能/热）；尾联将碰撞理论提升至宇宙尺度，将天地比作台球桌。<span class="note-label">物理过程拆解</span>碰撞过程动量守恒（系统合外力为零或内力远大于外力）；弹性碰撞动能也守恒；非弹性碰撞有动能损失；质量悬殊时（如乒乓球撞篮球），重球几乎不动，轻球反弹。<span class="note-label">逐句赏析</span>「换骨风」三字既写力的作用（脱胎换骨），又暗含动量交换的本质；「分毫不」以斩钉截铁的口吻写动量守恒的精确性；「动能若失化热烘」将非弹性碰撞的能量耗散写得通俗而准确——动能并非消失，而是转化为内能；「天地一枰中」化用「天地为棋盘」的典故，将宇宙规律比作一局精密的台球游戏，有庄子的浩渺也有牛顿的精确。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(20)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+
+<div class="section-header" id="sec-电磁玄机">卷二 · 电磁玄机（第21—38首）</div>
+
+    <article class="poem-card" id="poem-21" data-section="电磁玄机" data-num="21">
+      <div class="poem-header">
+        <span class="poem-number">第二十一首</span>
+        <h3 class="poem-title">隔空缘</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两电荷成一段缘，同名相斥异相怜。</p>
+<p class="poem-line">隔空传力无丝线，远近平方定密绵。</p>
+
+      </div>
+      <div class="poem-note" id="note-21">
+        <p>此诗写电荷间相互作用的库仑定律——F=kq₁q₂/r²，与万有引力定律形式相似而本质不同（电荷有正负）。<span class="note-label">整体赏析</span>首句以「一段缘」将电磁力写为电荷间的「缘分」；次句写电荷相互作用的两种模态——同号相斥、异号相吸；三句「隔空传力无丝线」强调电场力的超距作用特征——不需要介质直接接触；末句以平方反比关系与引力定律对话，暗示自然规律的统一性。<span class="note-label">物理过程拆解</span>真空中两个静止点电荷之间的相互作用力F=kq₁q₂/r²，方向沿连线；同号电荷相斥（F为正，沿连线向外），异号电荷相吸（F为负）；与万有引力定律比较：形式上同为平方反比，但引力只有吸引，电力有吸引和排斥两种可能。<span class="note-label">逐句赏析</span>「缘」字为全诗定下情感基调——正负电荷如阴阳两极，相遇则生「缘」；「无丝线」以否定的笔法写非接触力，三字干净利落；「密绵」兼有「紧密」与「绵长」两重意味，暗示电力可在宏观距离上显著作用。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(21)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-22" data-section="电磁玄机" data-num="22">
+      <div class="poem-header">
+        <span class="poem-number">第二十二首</span>
+        <h3 class="poem-title">虚空威</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">虚空无处不含威，置一微尘试险机。</p>
+<p class="poem-line">受力几何分两半，半归外境半归依。</p>
+
+      </div>
+      <div class="poem-note" id="note-22">
+        <p>此诗以「试探电荷」的方法定义电场强度E=F/q——电场是电荷周围空间的一种特殊物质，对放入其中的电荷有力的作用。<span class="note-label">整体赏析</span>首句以「虚空含威」写电场虽无形却真实存在的「势」；次句「微尘」即试探电荷，「试险机」写以微小电荷探测电场的实验方法论；三句写试探电荷受力F；末句「半归外境半归依」是E=F/q的诗意表达——受力的大小一部分来自外场（E），一部分来自试探电荷自身（q），除以q便得到纯粹的场属性。<span class="note-label">物理过程拆解</span>电场强度E=F/q（定义式），与试探电荷无关，仅由场源电荷与空间位置决定；电场线从正电荷出发终止于负电荷，切线方向即为E的方向；E是矢量，满足叠加原理。<span class="note-label">逐句赏析</span>「威」字状电场之无形威慑力，准确而传神——电场确实是「威而不露」的存在；「微尘」以佛学语汇代试探电荷，暗示其微小到不影响原电场的理想化条件；「半归外境半归依」是全诗最具分析深度的句子——将以除法分离场与源的实验逻辑凝练为一句禅机。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(22)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-23" data-section="电磁玄机" data-num="23">
+      <div class="poem-header">
+        <span class="poem-number">第二十三首</span>
+        <h3 class="poem-title">高下</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">高处水流低处潭，电荷行路理相谙。</p>
+<p class="poem-line">莫看平地无高下，伏特量来有北南。</p>
+
+      </div>
+      <div class="poem-note" id="note-23">
+        <p>此诗以水流的高下类比电势的高下——电荷在电场中从高电势移向低电势，电势差（电压）是驱动电荷流动的「电高度差」。<span class="note-label">整体赏析</span>首句以水往低处流的水力类比建立直觉——电势差之于电荷，犹高度差之于水流；次句「理相谙」点明水与电两种现象背后的共同逻辑——都是势差驱动的运动；三句写电压虽肉眼不可见（「莫看平地无高下」），却是客观存在的物理量；末句以伏特表测量的确定性为收束。<span class="note-label">物理过程拆解</span>电势是标量，某点电势等于单位正电荷从该点移到零势能点过程中电场力做的功；电势差（电压）U_AB=φ_A-φ_B，等于单位正电荷从A移到B过程中电场力做的功；正电荷在电场力作用下从高电势移向低电势。<span class="note-label">逐句赏析</span>「水往低处流」是中国人的集体直觉记忆，以此起兴既亲切又高效；「理相谙」暗示物理世界的统一性——不同的现象背后可能共享同一套数学结构；「伏特量来有北南」将测量行为写入诗句，「北南」以方位词代电势的高低取向，化抽象为具象。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(23)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-24" data-section="电磁玄机" data-num="24">
+      <div class="poem-header">
+        <span class="poem-number">第二十四首</span>
+        <h3 class="poem-title">窄关</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电流如水压如山，阻力横当窄窄关。</p>
+<p class="poem-line">三事牵缠成一诀，欧翁窥破便无艰。</p>
+
+      </div>
+      <div class="poem-note" id="note-24">
+        <p>此诗以水流经狭管的比喻写欧姆定律I=U/R——电流与电压成正比、与电阻成反比。<span class="note-label">整体赏析</span>首句以「水」喻电流、「山」喻电压/水压，建立水力类比的基本框架；次句「窄窄关」以管道的狭窄处比喻电阻——通路越窄（电阻越大），水流（电流）越小；三句「三事牵缠成一诀」写I、U、R三者构成一个简洁的定量关系；末句以欧姆的发现为画龙点睛之笔。<span class="note-label">物理过程拆解</span>I=U/R：通过导体的电流与导体两端的电压成正比，与导体的电阻成反比；电阻R=ρL/S由材料、长度和横截面积决定；欧姆定律是线性电路的基石，适用于金属导体和电解液。<span class="note-label">逐句赏析</span>「压如山」以山体之重写电压的驱动力，意象厚重有力；「窄窄关」叠字写电阻之隘口形象，使人联想到血管狭窄则血流受阻的生理感受；「三事牵缠」以人际关系隐喻物理量之间的函数关系，使冷漠的公式有了温度；「欧翁窥破」以「窥破天机」的敬意致敬科学发现者，与前面万有引力诗中「牛郎窥破」形成呼应。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(24)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-25" data-section="电磁玄机" data-num="25">
+      <div class="poem-header">
+        <span class="poem-number">第二十五首</span>
+        <h3 class="poem-title">炉红</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电流默默做功多，灯暖炉红是此科。</p>
+<p class="poem-line">若问热来多少度，平方乘阻乘时和。</p>
+
+      </div>
+      <div class="poem-note" id="note-25">
+        <p>此诗写电流做功与焦耳定律Q=I²Rt——电流通过导体时产生的热量与电流平方、电阻和通电时间成正比。<span class="note-label">整体赏析</span>首句以「默默做功」拟人化电流的「劳动」；次句以电灯发热、电炉发红的日常现象验证电流热效应；三句以设问引出定量关系；末句以七言概括Q=I²Rt的完整公式结构。<span class="note-label">物理过程拆解</span>电功W=UIt；电功率P=UI；焦耳定律Q=I²Rt（纯电阻电路中Q=W=UIt=U²t/R=I²Rt）；电流的热效应是电子与导体中离子碰撞、将电能转化为内能的结果。<span class="note-label">逐句赏析</span>「默默」二字将电流做功的无形无声写得生动——它不像机械做功那样轰轰烈烈，却是现代文明的基石；「灯暖炉红」以两个最日常的电器现象枚举电流热效应，四字皆有暖意；末句以「平方」「乘阻」「乘时」三组数学操作直接入诗，将公式节奏化，读来有数来宝般的韵律感却毫无俚俗之气。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(25)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-26" data-section="电磁玄机" data-num="26">
+      <div class="poem-header">
+        <span class="poem-number">第二十六首</span>
+        <h3 class="poem-title">蓄雷</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两片相望隔素空，正邪分据各西东。</p>
+<p class="poem-line">敛来霹雳藏方寸，泄去洪流一霎中。</p>
+
+      </div>
+      <div class="poem-note" id="note-26">
+        <p>此诗以电容器两板相隔、正负电荷分立为象，写电容器的储能与放电。<span class="note-label">整体赏析</span>首句「隔素空」写两片导体板以绝缘介质（或真空）相隔的结构特征；次句「正邪分据」以拟人笔法写两极分别积聚等量异号电荷；三句「敛霹雳藏方寸」极言电容器储能——电能以电场能的形式浓缩于极板之间的狭小空间；末句「泄去洪流一霎中」写放电过程的迅猛——储存的能量在极短时间内释放。全诗由静（蓄）到动（放），收放之间有雷霆之势。<span class="note-label">物理过程拆解</span>电容C=Q/U=εS/d，储存的电场能E=½CU²=½QU。充电过程：电源做功→电荷在两极分离→建立电场→储存能量。放电过程：两极通过外电路导通→电荷中和→电场能释放。<span class="note-label">逐句赏析</span>「素空」兼指真空与绝缘介质，以「素」字赋予介质以洁净的质感；「正邪」是电荷正负的诗意转写，与「各西东」形成对立统一的空间感；「敛」字以收敛之力写储能，「泄」字以奔腾之势写放电，两动词构成全诗的张力轴；「藏方寸」与「一霎中」构成空间与时间的双重浓缩。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(26)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-27" data-section="电磁玄机" data-num="27">
+      <div class="poem-header">
+        <span class="poem-number">第二十七首</span>
+        <h3 class="poem-title">暗礁</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">源头自有暗礁横，外路崎岖一样程。</p>
+<p class="poem-line">若问电流多少许，全途阻险定分明。</p>
+
+      </div>
+      <div class="poem-note" id="note-27">
+        <p>此诗以水路喻电路，写闭合电路欧姆定律I=E/(R+r)——电流等于电动势除以内外电阻之和。<span class="note-label">整体赏析</span>首句「暗礁」喻电源内阻——它潜伏于源头内部，不为外人所见却实实在在地阻碍电流；次句写外电路电阻同样构成「崎岖」；三句以设问引出电流大小的决定因素；末句给出答案——电流并非仅看外路，而要将内阻外阻一并纳入计算。<span class="note-label">物理过程拆解</span>闭合电路中，电动势E在内外电路上分配：U_外=IR，U_内=Ir，E=U_外+U_内=I(R+r)。内阻虽小，在大电流（如短路）时其影响不可忽略。<span class="note-label">逐句赏析</span>「暗礁」是全诗的文眼——将看不见的电源内阻比作水面下的礁石，既准确（它确实「暗」—藏在电源内部），又富于画面感；「一样程」三字将内外电阻等量齐观，暗含全电路分析的方法论精髓；末句「全途阻险」统摄内外，以「分明」二字收束，斩钉截铁地宣告物理定律的确定性。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(27)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-28" data-section="电磁玄机" data-num="28">
+      <div class="poem-header">
+        <span class="poem-number">第二十八首</span>
+        <h3 class="poem-title">周陲</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">磁针指北告人知，布下虚空一面帷。</p>
+<p class="poem-line">若问威仪何处见，铁星纷洒自描眉。</p>
+
+      </div>
+      <div class="poem-note" id="note-28">
+        <p>此诗写磁场——磁体或电流周围空间存在的一种特殊物质，对放入其中的磁极或电流有力的作用。<span class="note-label">整体赏析</span>首句以指南针的指向效应证明磁场的存在——磁针的偏转是磁场施加力矩的结果；次句「一面帷」将无形的磁场比作一面看不见的帷幕，笼罩在磁体周围；三句以设问引出磁场可视化（磁感线）的方法；末句以铁屑实验作答——撒在磁体周围的铁屑会沿磁感线方向排列，「自描眉」既写铁屑自动排列的奇妙，也暗示磁感线的曲线之美如画眉。<span class="note-label">物理过程拆解</span>磁感应强度B=F/(IL)（定义式），方向即小磁针N极所指方向。磁感线是闭合曲线（外部从N到S，内部从S到N），其疏密表示B的大小。铁屑在磁场中被磁化，沿磁感线方向排列。<span class="note-label">逐句赏析</span>「告人知」三字赋予磁针以信使的角色，将磁场从不可见变为可知；「帷」的意象妙在它既无形（透明薄纱）又有边界（笼罩范围），恰好对应磁场的空间分布特征；「铁星纷洒」以「星」代铁屑，将实验室的粗糙铁粉升华为星空般的诗意景象；「自描眉」以画眉之笔喻铁屑沿磁感线的自然排列，使物理实验带上了文人画的韵致。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(28)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-29" data-section="电磁玄机" data-num="29">
+      <div class="poem-header">
+        <span class="poem-number">第二十九首</span>
+        <h3 class="poem-title">左手判</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电丝搁在磁场中，忽有横推力暗攻。</p>
+<p class="poem-line">伸得左手法断后，便知此力向何冲。</p>
+
+      </div>
+      <div class="poem-note" id="note-29">
+        <p>此诗写安培力——通电导线在磁场中所受的力，其方向由左手定则判定。<span class="note-label">整体赏析</span>首句建立场景——一段通电直导线置于外磁场之中；次句「横推」写安培力的特征——力的方向既垂直于电流方向又垂直于磁场方向；三句引入左手定则作为判定方向的工具；末句以判明方向作结。<span class="note-label">物理过程拆解</span>安培力F=BILsinθ，方向由左手定则判定：伸开左手，磁感线穿入手心，四指指向电流方向，拇指所指即为安培力方向。当B∥I时（θ=0），F=0；当B⊥I时（θ=90°），F最大。<span class="note-label">逐句赏析</span>「搁」字以日常口语入诗，将实验场景写得轻松自然——仿佛只是随手将导线放在磁场中，便有「横推力」骤然出现；「暗攻」二字将力的突然性与方向垂直性一并写出——它不是顺着电流的方向推，而是从侧面「偷袭」；「左手法断」是全诗的核心动作——将左手定则比作法官判案，手势一伸便知结果，化繁为简。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(29)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-30" data-section="电磁玄机" data-num="30">
+      <div class="poem-header">
+        <span class="poem-number">第三十首</span>
+        <h3 class="poem-title">不直行</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">一粒微尘入域疆，欲前无路欲旁徨。</p>
+<p class="poem-line">终身只得圆心绕，纵有豪情未直航。</p>
+
+      </div>
+      <div class="poem-note" id="note-30">
+        <p>此诗写洛伦兹力作用下带电粒子在匀强磁场中的匀速圆周运动。<span class="note-label">整体赏析</span>首句以「微尘」代带电粒子，「入域疆」写入磁场区域的过程；次句「欲前无路欲旁徨」精细写出洛伦兹力的独特效果——力始终与速度方向垂直，既不让粒子沿原方向直线前进，也不给它任意偏转的自由，而是将其约束在圆周轨道上；三句「终身只得圆心绕」以略带宿命感的语调写出圆周运动的宿命性；末句「纵有豪情」赋予粒子以人格化的「意志」，而「未直航」是洛伦兹力对「直航」梦想的坚定否定。<span class="note-label">物理过程拆解</span>带电粒子以速度v垂直射入匀强磁场B，受洛伦兹力f=qvB（方向由左手定则判定，始终垂直于v）。f不做功→速率不变→匀速圆周运动：qvB=mv²/r→r=mv/(qB)，T=2πm/(qB)。若v∥B则粒子做匀速直线运动。<span class="note-label">逐句赏析</span>「欲前无路欲旁徨」七字是全诗最动人的一句——化用《诗经》「行迈靡靡，中心旁徨」的语式，将一个物理事实（洛伦兹力使速度方向不断改变却不改变大小）写成了一种存在困境；「终身只得」的宿命感与「纵有豪情」的悲壮感形成张力，使一首物理诗带上了悲剧英雄的气质。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(30)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-31" data-section="电磁玄机" data-num="31">
+      <div class="poem-header">
+        <span class="poem-number">第三十一首</span>
+        <h3 class="poem-title">穿线</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">磁线无形度几巡，变生顷刻便通神。</p>
+<p class="poem-line">多穿快易方成势，不动如山枉自陈。</p>
+
+      </div>
+      <div class="poem-note" id="note-31">
+        <p>此诗写法拉第电磁感应定律——感应电动势的大小与穿过线圈的磁通量变化率成正比。<span class="note-label">整体赏析</span>首句「磁线无形度几巡」写磁感线（即磁通量Φ=BS）穿过线圈；次句「变生顷刻便通神」写磁通量一旦发生变化，电动势便应运而生——「通神」二字将电磁感应写得近乎神通；三句以「多穿快易」凝练概括决定感应电动势大小的三个因素——匝数多（多）、磁通变化大（穿）、变化快（快易）；末句以「不动如山」的静止状态与变化状态形成对比——磁通不变则无感应，一切枉然。<span class="note-label">物理过程拆解</span>E=n·ΔΦ/Δt（法拉第电磁感应定律）。磁通量Φ=BScosθ。感应电动势的大小取决于磁通量的变化率（而非磁通量本身的大小）。三种引起磁通变化的方式：B变、S变、θ变。<span class="note-label">逐句赏析</span>「度几巡」以「巡」字写磁感线反复穿过的动态过程，赋予无形的磁通以可数可计的「巡数」；「变生顷刻」四字写出电磁感应的瞬时性——不变化就无事发生，一变化立刻响应；「多穿快易」是全诗最凝练的四字——「多」对应匝数n，「穿」对应磁通量Φ，「快易」对应变化率ΔΦ/Δt，将一整套公式压缩为四字箴言。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(31)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-32" data-section="电磁玄机" data-num="32">
+      <div class="poem-header">
+        <span class="poem-number">第三十二首</span>
+        <h3 class="poem-title">来拒去留</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">磁来偏拒反方迎，磁去还将顺势撑。</p>
+<p class="poem-line">不是此君偏拗性，天教守定自家程。</p>
+
+      </div>
+      <div class="poem-note" id="note-32">
+        <p>此诗写楞次定律——感应电流的方向总是使感应电流的磁场阻碍引起感应电流的磁通量的变化。<span class="note-label">整体赏析</span>首句「磁来偏拒」写磁铁靠近线圈时，线圈中感应电流产生的磁场排斥磁铁（抗拒磁通增加）；次句「磁去顺势撑」写磁铁远离时，线圈产生的磁场吸引磁铁（弥补磁通减少）；三句以反笔为楞次定律的「拗性」辩护——这不是它任性，而是自然规律使然；末句「天教守定自家程」将楞次定律提升为天命——阻碍变化是自然界的深层法则。<span class="note-label">物理过程拆解</span>楞次定律的「来拒去留」：磁铁靠近→穿过线圈的Φ增大→感应电流产生反向磁场→阻碍Φ增大（表现为排斥）；磁铁远离→Φ减小→感应电流产生同向磁场→阻碍Φ减小（表现为吸引）。楞次定律实际上是能量守恒定律在电磁感应中的体现——若感应电流的方向不是阻碍变化，就会违反能量守恒。<span class="note-label">逐句赏析</span>「来拒去留」四字是全诗之魂——它本是楞次定律的标准口诀，但入诗后与「反方迎」「顺势撑」构成了一组生动的拟人化对抗画面，仿佛磁铁与线圈在进行一场充满策略的博弈；「拗性」以一字写出楞次定律的反直觉特征，随即以「天教」将其合法化——不是任性，是天命。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(32)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-33" data-section="电磁玄机" data-num="33">
+      <div class="poem-header">
+        <span class="poem-number">第三十三首</span>
+        <h3 class="poem-title">波未平</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">一波未伏一波兴，起落循环不失恒。</p>
+<p class="poem-line">若问此中何所拟，正弦图上看潮升。</p>
+
+      </div>
+      <div class="poem-note" id="note-33">
+        <p>此诗写正弦交变电流——电流的大小和方向随时间按正弦规律周期变化。<span class="note-label">整体赏析</span>首句「一波未伏一波兴」以大海波涛的连绵起伏起兴，既写出交流电的周期性循环，也写出其永不停歇的动态特征；次句「不失恒」点出交流电虽然时刻变化，却有稳定的周期和频率；三句以设问引出交流电的数学本质；末句以「正弦图」「潮升」两重意象给出答案——交流电的波形是正弦曲线，其变化如同潮汐的周期性涨落。<span class="note-label">物理过程拆解</span>正弦交变电流i=I_m sin(ωt+φ)，其中I_m为峰值（最大值），ω=2πf为角频率，φ为初相位。有效值I=I_m/√2（通过热效应等效于直流电），周期T=1/f。我国市电f=50Hz，T=0.02s。<span class="note-label">逐句赏析</span>「未伏」「又兴」四字以递进式的动词序列写出正弦波的连续性——每一瞬间都是前一瞬间的延续，没有跳跃与断裂；「不失恒」是全诗的关键转折——从表面看交流电瞬息万变，但周期和有效值却恒常不变，变与不变的辩证统一在此三字中完成；「潮升」将抽象的正弦曲线化为海水涨落的具身体验——海边人都知道潮汐的时间规律性，以此喻交流电的周期性，亲切而有力。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(33)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-34" data-section="电磁玄机" data-num="34">
+      <div class="poem-header">
+        <span class="poem-number">第三十四首</span>
+        <h3 class="poem-title">铁芯</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">铁芯两绕各西东，匝数悬殊压不同。</p>
+<p class="poem-line">升降全凭圈数计，守成能量是元宗。</p>
+
+      </div>
+      <div class="poem-note" id="note-34">
+        <p>此诗写变压器——利用电磁感应原理改变交流电压的装置。<span class="note-label">整体赏析</span>首句「铁芯两绕」写变压器的基本结构——闭合铁芯上绕有原、副两个线圈；次句「匝数悬殊压不同」点出变压的核心关系——原副线圈匝数比决定电压比；三句「升降全凭圈数计」给出升压或降压的操作方法——副线圈匝数多于原线圈则升压，反之降压；末句以能量守恒收束——理想变压器输入功率等于输出功率，电压虽变但能量不增不减。<span class="note-label">物理过程拆解</span>U₁/U₂=n₁/n₂（电压比等于匝数比），I₁/I₂=n₂/n₁（电流比与匝数比成反比），P₁=P₂（理想变压器功率守恒）。实际变压器有铜损、铁损（涡流、磁滞），效率η=P₂/P₁&lt;1。<span class="note-label">逐句赏析</span>「铁芯」二字以最朴素的材料名词为题，却准确地指向了变压器的核心——没有铁芯的磁耦合，便没有高效的电磁能量传递；「各西东」以方位词写两线圈在铁芯上的空间分布，简洁而有画面感；「匝数悬殊」四字是全诗的因果链——「悬殊」之因导致「压不同」之果；末句「守成能量是元宗」中以「元宗」（根本宗旨）一词，将能量守恒确立为变压过程的最高法则，庄严有力。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(34)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-35" data-section="电磁玄机" data-num="35">
+      <div class="poem-header">
+        <span class="poem-number">第三十五首</span>
+        <h3 class="poem-title">迟来</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">合闸偏有电流迟，断电生花一霎奇。</p>
+<p class="poem-line">若得两圈相靠近，彼圈变化此圈随。</p>
+
+      </div>
+      <div class="poem-note" id="note-35">
+        <p>此诗写自感与互感现象——线圈中电流变化时，自身产生自感电动势阻碍电流变化；两相邻线圈中，一圈电流变化在另一圈中产生互感电动势。<span class="note-label">整体赏析</span>首句「合闸偏有电流迟」写自感现象——开关闭合时，电流并不立即达到稳定值，而是逐渐增大（自感电动势阻碍电流增加）；次句「断电生花一霎奇」写断开电路时，由于自感电动势极大，在开关处产生电火花；三句以假设引出互感现象的条件；末句以彼圈变化带动此圈的因果关系点出互感的本质。<span class="note-label">物理过程拆解</span>自感电动势E_自=-L·ΔI/Δt，L为自感系数。互感电动势E_互=-M·ΔI/Δt，M为互感系数。自感是线圈对自身电流变化的「惯性」，类似于力学中的质量。<span class="note-label">逐句赏析</span>「迟来」二字为全诗定题——电流的「迟到」是自感（电磁惯性）的最直观表现；「生花一霎奇」以「花」代电火花，既写其瞬间绽放的美丽，也暗示其短暂（「一霎」）；「彼圈变化此圈随」以七字写尽互感的因果链条——变化是因，随之而动是果，简洁得近乎格言。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(35)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-36" data-section="电磁玄机" data-num="36">
+      <div class="poem-header">
+        <span class="poem-number">第三十六首</span>
+        <h3 class="poem-title">荡碧霄</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电容放电入线圈，电场消时磁场骄。</p>
+<p class="poem-line">一往一还无尽已，恰如秋影荡层霄。</p>
+
+      </div>
+      <div class="poem-note" id="note-36">
+        <p>此诗写LC振荡电路——电容器的电场能与线圈的磁场能相互转换，形成周期性的电磁振荡。<span class="note-label">整体赏析</span>首句写电容器对线圈放电——这是LC振荡的起振过程；次句「电场消时磁场骄」以对比笔法写出能量从电场能→磁场能的转化——电场能在放电过程中减小，磁场能随之增大，「骄」字写磁场建立后的「得势」之态；三句「一往一还」概括振荡的本质——能量在电容与电感之间往复流转，永不休止；末句以秋千荡于碧霄为喻，写出振荡的周期性、对称性与美感。<span class="note-label">物理过程拆解</span>LC振荡的四个阶段：(1)电容放电，电场能→磁场能；(2)电流对电容反向充电，磁场能→电场能；(3)电容反向放电；(4)电流对电容正向充电。完整周期T=2π√(LC)。若无电阻（理想情况），振荡永不衰减；实际上电阻会消耗能量，形成阻尼振荡。<span class="note-label">逐句赏析</span>「电场消时磁场骄」以「消」「骄」的对照写出能量转化的动态过程——一方的衰落恰是另一方的崛起；「一往一还」四字将复杂的四阶段振荡压缩为最简练的往复意象，如同中国人的阴阳交替观念；「秋影荡层霄」是全诗最富诗意的画面——秋千荡向碧空，恰如LC振荡中电场能与磁场能的往来交替，既有势能的升降，又有动能的转换，取象之妙令人叫绝。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(36)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-37" data-section="电磁玄机" data-num="37">
+      <div class="poem-header">
+        <span class="poem-number">第三十七首</span>
+        <h3 class="poem-title">无绳</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电场生磁磁复电，无形漾漾向空穿。</p>
+<p class="poem-line">光奔不借丝绳系，麦氏窥来是妙缘。</p>
+
+      </div>
+      <div class="poem-note" id="note-37">
+        <p>此诗写电磁波——变化的电场和变化的磁场相互激发，以光速在空间中传播。<span class="note-label">整体赏析</span>首句以回文式的句式写电场与磁场的相互转化、相互激发——变化的电场产生磁场，变化的磁场又产生电场，如此接力，向远方传播；次句「无形漾漾」写电磁波虽不可见却真实存在的波动本质；三句「不借丝绳系」以否定句式强调电磁波不需要介质——它可以在真空中传播，与需要介质的机械波截然不同；末句以麦克斯韦的预言为结。<span class="note-label">物理过程拆解</span>麦克斯韦方程组揭示了变化的电场激发涡旋磁场、变化的磁场激发涡旋电场的规律，由此预言了电磁波的存在。电磁波在真空中的速度v=1/√(ε₀μ₀)=c=3×10⁸ m/s。电磁波是横波，E⊥B⊥v。<span class="note-label">逐句赏析</span>「电场生磁磁复电」以八字构成自循环的因果链，读来有绕口令般的节奏感，却准确地传达了电磁波的自我维持机制；「漾漾」二字以水波之态写无线电波之形，将不可见化为可见；「无绳」是全诗题眼——机械波如绳波需介质传递振动，电磁波却「不借丝绳」，在真空中自由穿行，这一差异是物理学从经典走向现代的关键一步。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(37)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-38" data-section="电磁玄机" data-num="38">
+      <div class="poem-header">
+        <span class="poem-number">第三十八首</span>
+        <h3 class="poem-title">弯绕</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">粒入强磁径便弯，不朝前去绕圈圜。</p>
+<p class="poem-line">若逢来速同磁向，一往无拘过万山。</p>
+
+      </div>
+      <div class="poem-note" id="note-38">
+        <p>此诗写带电粒子在匀强磁场中的运动规律——速度垂直于磁场时做匀速圆周运动，平行于磁场时做匀速直线运动。<span class="note-label">整体赏析</span>首句以「径便弯」写粒子一进入磁场轨道立刻弯曲；次句「绕圈圜」写圆周运动的完整轨迹；三句笔锋一转，引入另一种极端情形——若粒子速度方向与磁场方向相同（或相反），则不受洛伦兹力作用；末句「一往无拘过万山」以奔放的笔调写无阻碍的直线运动。<span class="note-label">物理过程拆解</span>洛伦兹力f=qvBsinθ。(1)v⊥B时，f=qvB，粒子做匀速圆周运动，r=mv/(qB)；(2)v∥B时，f=0，粒子做匀速直线运动；(3)v与B有夹角时，粒子做等距螺旋线运动（匀速圆周+匀速直线）。<span class="note-label">逐句赏析</span>前两句的「弯」「绕」与后两句的「直」「过」形成强烈对比——同一种力（洛伦兹力），因入射方向不同而造就判若云泥的运动轨迹，这正是矢量叉乘（v×B）的奇妙之处；「一往无拘过万山」以李白的奔放笔法写粒子沿磁感线方向运动时的酣畅，读来令人心胸开阔——科学之诗的浪漫，于此可见一斑。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(38)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+
+<div class="section-header" id="sec-热学之理">卷三 · 热学之理（第39—41首）</div>
+
+    <article class="poem-card" id="poem-39" data-section="热学之理" data-num="39">
+      <div class="poem-header">
+        <span class="poem-number">第三十九首</span>
+        <h3 class="poem-title">三牵</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">三般变量互牵根，一压一温一体囤。</p>
+<p class="poem-line">热便舒张寒便敛，千端变化此中存。</p>
+
+      </div>
+      <div class="poem-note" id="note-39">
+        <p>此诗写理想气体状态方程pV=nRT（或pV/T=常量）——压强、体积、温度三者相互关联，任一变化必牵动其余。<span class="note-label">整体赏析</span>首句「三般变量互牵根」以人际关系隐喻物理量之间的函数纠缠——p、V、T三者如三根绳索互相牵引；次句列出三变量之名；三句以日常经验验证状态方程——加热时气体膨胀（T↑→V↑若p不变，或p↑若V不变），冷却时收缩；末句「千端变化此中存」将无数实验数据归于一式。<span class="note-label">物理过程拆解</span>理想气体状态方程pV=nRT。三个气体实验定律为其特殊情形：玻义耳定律（T不变，pV=常数）、查理定律（V不变，p∝T）、盖-吕萨克定律（p不变，V∝T）。理想气体模型：分子体积可忽略，分子间无相互作用力。<span class="note-label">逐句赏析</span>「互牵根」三字以中国俗语「牵一发而动全身」的思维写气体三量的联动关系，既形象又准确；「热便舒张寒便敛」以人体对寒热的自然反应（热胀冷缩）来验证气体规律，将物理定律还原为身体经验；末句「千端变化此中存」暗含科学归纳的逻辑——万千实验现象，一条简洁方程足以统摄。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(39)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-40" data-section="热学之理" data-num="40">
+      <div class="poem-header">
+        <span class="poem-number">第四十首</span>
+        <h3 class="poem-title">两路通</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两条大路入丹田，或热或功皆可传。</p>
+<p class="poem-line">若要此身添气力，收支加减算方圆。</p>
+
+      </div>
+      <div class="poem-note" id="note-40">
+        <p>此诗写热力学第一定律ΔU=Q+W——系统内能的变化等于吸收的热量与外界对系统做功之和。<span class="note-label">整体赏析</span>首句以「两条大路」比喻改变系统内能的两条途径——传热与做功；次句分别点出两条路的名称；三句以设问引出内能变化的条件——要使系统「添气力」（内能增加），或吸收热量，或接受外界做功；末句以「收支加减」的会计隐喻写内能变化的计算方法——热与功的收支平衡决定内能的增减。<span class="note-label">物理过程拆解</span>ΔU=Q+W（注意符号约定：系统吸热Q&gt;0，放热Q&lt;0；外界对系统做功W&gt;0，系统对外界做功W&lt;0）。第一类永动机不可能制成（违反能量守恒定律）。热力学第一定律是包括热现象在内的能量守恒定律。<span class="note-label">逐句赏析</span>「丹田」以中国传统内丹学术语代系统内能，巧妙将西方热力学第一定律嫁接到中国文化的身体认知传统上——丹田是人体之气的根本，内能是热力学系统之气的根本；「收支加减算方圆」将能量守恒写成了一笔清晰的账目——宇宙的会计从不做假账，热量与功的收支必然平衡；「方圆」以几何意象代计算结果的周正严整，一语双关。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(40)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-41" data-section="热学之理" data-num="41">
+      <div class="poem-header">
+        <span class="poem-number">第四十一首</span>
+        <h3 class="poem-title">不息</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">万物分疏到渺茫，微尘不息永奔忙。</p>
+<p class="poem-line">热来愈急寒来缓，一世无停是此生。</p>
+
+      </div>
+      <div class="poem-note" id="note-41">
+        <p>此诗写分子动理论——物质由大量分子组成，分子永不停息地做无规则热运动，温度越高运动越剧烈。<span class="note-label">整体赏析</span>首句「分疏到渺茫」写物质的微观构成——不断分割，直至分子尺度，不可穷尽；次句「微尘不息永奔忙」写分子的永恒运动——在任何温度（除绝对零度）下，分子都在做无规则运动；三句写温度与分子运动剧烈程度的正相关——温度愈高，分子运动愈激烈（愈「急」），温度愈低则运动愈趋缓和；末句「一世无停是此生」以感叹收束——分子的一生是永不停歇的一生。<span class="note-label">物理过程拆解</span>分子动理论基本观点：(1)物质由大量分子组成；(2)分子永不停息地做无规则热运动（布朗运动为其间接证据）；(3)分子间存在引力和斥力。温度是大量分子热运动平均动能的标志：Eₖ(平均)=½mv²(平均)=(3/2)kT。<span class="note-label">逐句赏析</span>「渺茫」以空间尺度的极端微渺写分子，与中国古诗中「浩浩乎如冯虚御风」的宏大相对照，构成微观与宏观的诗学张力；「永奔忙」三字以人生劳碌喻分子运动，将无生命的物理过程赋予了生命感；末句「一世无停是此生」将分子的永恒运动写成了一种存在状态——以「无停」否定静止的可能，以「此生」赋予分子以一生一世的生命长度。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(41)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+
+<div class="section-header" id="sec-光影之妙">卷四 · 光影之妙（第42—46首）</div>
+
+    <article class="poem-card" id="poem-42" data-section="光影之妙" data-num="42">
+      <div class="poem-header">
+        <span class="poem-number">第四十二首</span>
+        <h3 class="poem-title">折腰</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">斜入清波便屈腰，快邦迟域两分曹。</p>
+<p class="poem-line">一从窥得斯翁律，正弦相比定无逃。</p>
+
+      </div>
+      <div class="poem-note" id="note-42">
+        <p>此诗写光的折射定律——光从一种介质斜射入另一种介质时，传播方向发生改变，入射角与折射角的正弦之比等于两种介质中的光速之比（即相对折射率）。<span class="note-label">整体赏析</span>首句「斜入清波便屈腰」以拟人笔法写光在界面处的弯折——「屈腰」即折射；次句「快邦迟域」以国界喻介质界面，光在光速快的介质（光疏）和光速慢的介质（光密）中分居两侧；三句引出斯涅尔的发现；末句以正弦之比的不变性收束——无论入射角如何变化，sin i/sin r恒等于常数n。<span class="note-label">物理过程拆解</span>折射定律（斯涅尔定律）：n₁sin i=n₂sin r，或sin i/sin r=v₁/v₂=n₂/n₁。折射的物理原因：光在不同介质中速度不同，导致波前倾斜。光从光疏进入光密介质时靠近法线（i&gt;r），从光密进入光疏介质时远离法线（i&lt;r）。<span class="note-label">逐句赏析</span>「折腰」以人体的鞠躬动作喻光的折射，既有视觉上的相似性（光线在界面发生转折），又有文学上的趣味性——仿佛光在两种介质的交界处「行礼」；「快邦迟域」以国界之喻写介质界面——光在「快邦」（光疏介质）与「迟域」（光密介质）的边境上改变方向，仿佛护照签章，煞是有趣；「无逃」以否定式强调折射定律的严格性，如天网恢恢，任何光线皆不可逃脱此律的约束。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(42)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-43" data-section="光影之妙" data-num="43">
+      <div class="poem-header">
+        <span class="poem-number">第四十三首</span>
+        <h3 class="poem-title">明镜</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">光从密质向疏投，偏到极端便掉头。</p>
+<p class="poem-line">此际澄澄如宝鉴，一丝不漏尽归收。</p>
+
+      </div>
+      <div class="poem-note" id="note-43">
+        <p>此诗写全反射——光从光密介质射向光疏介质，入射角大于临界角时，折射光线消失，入射光全部反射回原介质。<span class="note-label">整体赏析</span>首句设定全反射的前提条件——光必须从光密介质（如水、玻璃）向光疏介质（如空气）入射；次句「偏到极端便掉头」写出临界角的存在——入射角逐渐增大，折射角随之增大，当入射角超过临界角的一瞬间，折射光线消失，光全部反射，「掉头」即此意；三句以「宝鉴」喻全反射时的界面——如同完美的镜面；末句以「一丝不漏」写全反射的高效——100%的反射率，没有任何透射损失。<span class="note-label">物理过程拆解</span>全反射条件：(1)光从光密介质→光疏介质；(2)入射角≥临界角C，其中sin C=n₂/n₁（n₁&gt;n₂）。全反射的应用：光纤通信（光在纤芯与包层界面反复全反射，沿光纤传播）、潜望镜中的棱镜。<span class="note-label">逐句赏析</span>「偏到极端」四字以递进式的空间运动写出逐渐增大入射角直至跨越临界角的过程，「极端」即临界角；「掉头」二字以口语化的动作写出光线方向的180°折返，活泼而准确；「澄澄如宝鉴」将水与空气的界面（或玻璃与空气的界面）比作明亮的镜子——在临界角以上的入射光看来，那界面确实是一面完美的镜子；「一丝不漏」是全反射最动人的特征——与普通镜面（总有部分吸收）相比，全反射没有任何能量损失，是自然界最完美的「镜」。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(43)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-44" data-section="光影之妙" data-num="44">
+      <div class="poem-header">
+        <span class="poem-number">第四十四首</span>
+        <h3 class="poem-title">明暗间</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">两条光路聚同方，明暗相间费忖量。</p>
+<p class="poem-line">峰遇峰时加倍亮，峰逢谷处两俱丧。</p>
+
+      </div>
+      <div class="poem-note" id="note-44">
+        <p>此诗写光的双缝干涉——两列相干光波在空间叠加，形成明暗相间的干涉条纹。<span class="note-label">整体赏析</span>首句「两条光路聚同方」写两束相干光（如同一个光源经双缝分出的两列光波）在屏幕上相遇；次句「明暗相间」写干涉条纹的外观——明暗交替排列；三句以波的叠加原理解释明条纹——两列波的波峰（或波谷）同时到达某点，该点振动加强，亮度加倍；末句以波峰与波谷相遇解释暗条纹——两列波相位相反，相互抵消，该点呈暗。<span class="note-label">物理过程拆解</span>双缝干涉条件：(1)两光源频率相同，相差恒定（相干光源）；(2)光程差δ=r₂-r₁。加强（明纹）：δ=kλ；减弱（暗纹）：δ=(2k+1)λ/2。相邻明（暗）纹间距Δx=Lλ/d。白光照射时中央明纹为白色，两侧出现彩色条纹。<span class="note-label">逐句赏析</span>「明暗相间费忖量」将物理学家面对干涉条纹时的思考状态写入诗句——那些明暗交替的条纹并非随意排列，而是隐藏着深刻的叠加规律；「峰遇峰」「峰逢谷」以山峰与山谷的相遇比喻光波的同相叠加与反相抵消，化严谨的干涉条件为生动的自然图景；「两俱丧」以悲剧性词汇写两列光波相互抵消的物理事实——两个波的存在在相遇点「同归于尽」，光消失了，留下黑暗。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(44)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-45" data-section="光影之妙" data-num="45">
+      <div class="poem-header">
+        <span class="poem-number">第四十五首</span>
+        <h3 class="poem-title">狭缝</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">光逢狭缝不循常，绕过屏边自耀芒。</p>
+<p class="poem-line">缝愈窄时波愈散，始知微物有柔肠。</p>
+
+      </div>
+      <div class="poem-note" id="note-45">
+        <p>此诗写光的单缝衍射——光通过窄缝后偏离直线传播，在屏幕上形成中央亮纹最宽、两侧明暗相间的衍射图样。<span class="note-label">整体赏析</span>首句「光逢狭缝不循常」点出衍射的核心——光线在狭缝处偏离了直线传播的几何光学规律；次句「绕过屏边」写出衍射的典型表现——光似乎「绕」到了障碍物的背后，在几何阴影区也能产生亮纹；三句「缝愈窄时波愈散」写出衍射的显著条件——障碍物（或狭缝）的尺寸与波长可比拟时衍射现象最为明显；末句「柔肠」以拟人笔法写出光的波动本性——它不像粒子那样刚直，而有一种绕弯的「柔情」。<span class="note-label">物理过程拆解</span>单缝衍射：中央明纹宽度为两侧明纹的两倍。暗纹条件：a sinθ=kλ。衍射现象显著的条件：缝宽a与波长λ可比拟。惠更斯-菲涅耳原理：波前上每一点都是子波源，子波的相干叠加决定了衍射图样。<span class="note-label">逐句赏析</span>「不循常」三字精炼地概括了衍射对几何光学（直线传播）的「背叛」——光是循规蹈矩的，直到你给它一个足够窄的缝；「绕」字是全诗的动词核心——它写出了衍射最反直觉的特征：光居然能绕过障碍物；「缝愈窄时波愈散」是全诗的物理定律句——以递进句式写出缝宽与衍射效果的反比关系；「柔肠」以女性的柔情喻光的波动本性，与粒子性（刚直不阿）形成性格对照，使波粒二象性在此诗中先声夺人。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(45)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-46" data-section="光影之妙" data-num="46">
+      <div class="poem-header">
+        <span class="poem-number">第四十六首</span>
+        <h3 class="poem-title">一方向</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">横波只许一方向，竖摆全教栅缝挡。</p>
+<p class="poem-line">若问此中何以证，绳穿两栅自分朗。</p>
+
+      </div>
+      <div class="poem-note" id="note-46">
+        <p>此诗写光的偏振——横波中振动方向不对称的现象，光通过偏振片后只剩特定方向的振动分量。<span class="note-label">整体赏析</span>首句「横波只许一方向」写出偏振片的选择性透振——只有振动方向与偏振片的透振方向一致的光分量才能通过；次句「竖摆全教栅缝挡」以太形象化的「栅栏缝」比喻偏振片——垂直于透振方向的振动分量全被吸收（或反射）；三句以设问引出偏振的实验验证；末句以机械类比（绳子穿过两个方向的栅栏缝）给出通俗的证明——当两个偏振片透振方向垂直时，光完全不能通过。<span class="note-label">物理过程拆解</span>光是横波，振动方向垂直于传播方向。自然光各方向的横振动均有。偏振片（起偏器）只允许沿某一特定方向振动的光通过。马吕斯定律：I=I₀cos²θ。当两个偏振片的透振方向垂直（θ=90°）时，I=0（消光）。偏振现象证明光是横波。<span class="note-label">逐句赏析</span>「只许一方向」以律令式的口吻写偏振片的选择性——在偏振片面前，只有一种振动的光持有「通行证」；「栅缝」将微观的偏振片分子结构比作宏观的栅栏缝隙，理解门槛骤降；「绳穿两栅」以机械横波（绳波）的偏振类比光波偏振——当两片栅栏的缝隙方向垂直时，绳波先穿过第一片（振动方向与缝一致），无法穿过第二片（振动方向垂直于缝），恰如光通过两个正交偏振片后完全消光。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(46)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+
+<div class="section-header" id="sec-微观之秘">卷五 · 微观之秘（第47—50首）</div>
+
+    <article class="poem-card" id="poem-47" data-section="微观之秘" data-num="47">
+      <div class="poem-header">
+        <span class="poem-number">第四十七首</span>
+        <h3 class="poem-title">红限</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">金箔承光电子奔，问辉问色色为尊。</p>
+<p class="poem-line">红光纵烈终无用，紫线虽微自有门。</p>
+
+      </div>
+      <div class="poem-note" id="note-47">
+        <p>此诗写光电效应——光照射金属表面使电子逸出的现象，逸出光电子的动能取决于入射光的频率而非光强。<span class="note-label">整体赏析</span>首句「金箔承光电子奔」写光电效应的实验现象——光照射金属板，电子从中飞出；次句「问辉问色色为尊」是全诗的核心句——在光强（辉）与频率（色）之间，决定电子能否逸出以及动能大小的是频率；三句以红光（低频光）为例——不论红光多强（多「烈」），只要频率低于金属的极限频率（红限），就无法打出光电子；末句以紫外线（高频光）为正例——紫线虽弱（强度低），但只要频率高于红限，就能打出电子。<span class="note-label">物理过程拆解</span>光电效应方程：Eₖ=hν-W₀。(1)光电子最大初动能只与入射光频率ν有关，与光强无关；(2)存在截止频率ν₀=W₀/h（红限），低于此频率的光无论多强都不能产生光电子；(3)光电效应的瞬时性：从光照到电子逸出几乎没有时间延迟。<span class="note-label">逐句赏析</span>「问辉问色色为尊」以两个「问」字构成设问抉择——在光强与频率的较量中，频率胜出，此为量子观念的第一次胜利；「红光纵烈终无用」以「烈」字写红光强度之大，以「终无用」三字判其无效，斩钉截铁——经典电磁理论的剧烈失败尽在此句；「紫线虽微自有门」以「微」字写紫外光强度之弱，以「有门」二字写其有效——频率够了，门便开了，「门」即逸出功W₀的门槛。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(47)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-48" data-section="微观之秘" data-num="48">
+      <div class="poem-header">
+        <span class="poem-number">第四十八首</span>
+        <h3 class="poem-title">两立</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">时如波浪时如尘，万物生成两面身。</p>
+<p class="poem-line">测处为粒非是浪，天机深处不容人。</p>
+
+      </div>
+      <div class="poem-note" id="note-48">
+        <p>此诗写波粒二象性——微观粒子既具有波动性又具有粒子性，两者不可同时被完整观测。<span class="note-label">整体赏析</span>首句以「波浪」与「尘」（粒子）写出微观粒子的双重面目；次句「两面身」点出波粒二象性是微观世界的普遍属性；三句「测处为粒非是浪」暗指测量行为对量子态的「坍缩」——当你试图测量粒子的位置时，它表现得像个粒子，波动性隐匿了；末句「天机深处不容人」将量子力学的诠释困境上升到认识论高度——自然的深层奥秘似乎拒绝被人类完全捕捉。<span class="note-label">物理过程拆解</span>光具有波粒二象性（光电效应证粒子性，干涉衍射证波动性）；德布罗意提出实物粒子也具有波动性，λ=h/p。电子双缝干涉实验证明了电子的波动性。互补原理（玻尔）：波动性与粒子性是互补的，不能在同一实验中同时测量。不确定性原理：Δx·Δp≥h/4π。<span class="note-label">逐句赏析</span>「时如波浪时如尘」以「时……时……」的句型写出粒子的两副面孔——并非固定于一种身份，而是随情境而切换；「两面身」是中国通俗文学中「两面人」的活用——微观粒子正是自然界的「两面人」，它既不纯然是波也不纯然是粒；「测处为粒非是浪」是全诗最具认识论深度的句子——观测行为本身改变了被观测者的状态，这与经典物理学中「观测不影响对象」的前提截然不同；「天机深处不容人」以中国传统文化中「天机不可泄露」的观念收束量子力学的诠释困境，人类认知或有一道终极的门槛。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(48)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-49" data-section="微观之秘" data-num="49">
+      <div class="poem-header">
+        <span class="poem-number">第四十九首</span>
+        <h3 class="poem-title">不许停</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">电子环核各有层，高低能级定其能。</p>
+<p class="poem-line">跃迁不许中间驻，一跳方成另度灯。</p>
+
+      </div>
+      <div class="poem-note" id="note-49">
+        <p>此诗写玻尔原子模型——电子在核外特定轨道上运动，只能通过跃迁在两个定态之间跳变，不能停留在中间状态。<span class="note-label">整体赏析</span>首句「各有层」写电子的轨道是分立的（量子化的），不同的电子占据不同的能层；次句「高低能级定其能」写每一个轨道对应一个确定的能量值；三句「不许中间驻」是全诗的核心——电子不能连续地从一个轨道滑向另一个轨道，只能瞬间跃迁，不允许在任何中间能量状态停留；末句「一跳方成另度灯」以灯的开关为喻——原子发光的本质是电子从高能级跳回低能级，释放出一个光子。<span class="note-label">物理过程拆解</span>玻尔模型三假设：(1)定态假设：电子在特定轨道上运动不辐射能量；(2)跃迁假设：电子在不同定态之间跃迁时吸收或发射光子，hν=|E_n-E_m|；(3)轨道量子化：mvr=n·h/2π。玻尔模型成功解释了氢原子光谱，但对多电子原子不适用。<span class="note-label">逐句赏析</span>「不许停」三字是全诗之眼——它以一个禁令的口吻，将量子力学中最反直觉的特征（能量的不连续性）写成了宇宙的「法律」；「中间驻」准确地指向了经典物理与量子物理的根本分歧——在经典世界里你可以连续地减速停车，在量子世界里你只能从五档直接跳到三档；「一跳方成另度灯」以灯的开关隐喻能级跃迁——台下观众只见灯一亮一暗，台上的电子已完成了一次不允许渐变、只允许瞬变的生命跳跃。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(49)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+    <article class="poem-card" id="poem-50" data-section="微观之秘" data-num="50">
+      <div class="poem-header">
+        <span class="poem-number">第五十首</span>
+        <h3 class="poem-title">一星火</h3>
+        <span class="poem-type">七言绝句</span>
+      </div>
+      <div class="poem-body">
+        <p class="poem-line">核裂核融两样途，些微折损化玄珠。</p>
+<p class="poem-line">乘来光速平方后，一粒星灰照海隅。</p>
+
+      </div>
+      <div class="poem-note" id="note-50">
+        <p>此诗写核反应与质能方程E=mc²——核反应中微小的质量亏损转化为巨大的能量释放。<span class="note-label">整体赏析</span>首句以「裂」与「融」概括核反应的两种基本类型——重核裂变（如铀核分裂）与轻核聚变（如氢核融合）；次句「些微折损」写质量亏损——反应后总质量略小于反应前，这微小的质量差便是能量的来源，「化玄珠」写这亏损化成了无比珍贵的能量；三句直接引入质能方程的核心——乘上光速的平方（c²≈9×10¹⁶ m²/s²），将微小的质量放大为天文数字的能量；末句「一粒星灰」以宇宙尺度反衬微观世界的伟力——一粒微尘所含的质量若全部转化为能量，足以照亮整片海域。<span class="note-label">物理过程拆解</span>核反应中的质量亏损Δm，释放的能量ΔE=Δm·c²。重核裂变（如²³⁵U+n→轻核+中子+能量）是原子弹与核电站的原理。轻核聚变（如²H+³H→⁴He+n+能量）是氢弹与恒星能量的来源。结合能：将原子核分解为自由核子所需的最小能量。<span class="note-label">逐句赏析</span>「些微折损」以轻描淡写的方式写出质量亏损的微小数量级——它可能只占反应物总质量的千分之几，却足以撼动世界；「化玄珠」化用道教炼丹术的意象——炼丹家以凡物炼仙丹，物理学家以质量亏损「炼」出惊天能量；「乘来光速平方后」是全诗最震撼的数学诗句——光速平方这个巨大的因子（~10¹⁷），将毫厘之微放大为雷霆万钧；「一粒星灰照海隅」以宇宙的诗学完成全书的收束——从牛顿的苹果到爱因斯坦的星灰，物理学的史诗在四句诗中画上了庄严的句号。</p>
+      </div>
+      <button class="note-toggle" onclick="toggleNote(50)" aria-label="展开注解">
+        <span class="toggle-icon">▼</span> 注解
+      </button>
+    </article>
+
+</main>
+
+<button class="scroll-top" id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="回到顶部">↑</button>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  const body = document.documentElement;
+  const btn = document.getElementById('theme-btn');
+  const current = body.getAttribute('data-theme');
+  if (current === 'dark') {
+    body.removeAttribute('data-theme');
+    btn.textContent = '🌙';
+    localStorage.setItem('theme', 'light');
+  } else {
+    body.setAttribute('data-theme', 'dark');
+    btn.textContent = '☀';
+    localStorage.setItem('theme', 'dark');
+  }
+}
+
+// Load saved theme
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.setAttribute('data-theme', 'dark');
+  document.getElementById('theme-btn').textContent = '☀';
+}
+
+// Toggle note
+function toggleNote(num) {
+  const note = document.getElementById('note-' + num);
+  const btn = note.nextElementSibling;
+  const icon = btn.querySelector('.toggle-icon');
+  note.classList.toggle('open');
+  icon.classList.toggle('open');
+}
+
+// Section filter
+let currentSection = 'all';
+
+function filterSection(section) {
+  currentSection = section;
+  
+  // Update tab buttons
+  document.querySelectorAll('.section-tab').forEach(tab => {
+    tab.classList.toggle('active', tab.dataset.section === section);
+  });
+  
+  // Filter poem cards
+  document.querySelectorAll('.poem-card').forEach(card => {
+    if (section === 'all' || card.dataset.section === section) {
+      card.classList.remove('hidden');
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  
+  // Filter nav items
+  document.querySelectorAll('.nav-item').forEach(item => {
+    if (section === 'all' || item.dataset.section === section) {
+      item.classList.remove('hidden');
+    } else {
+      item.classList.add('hidden');
+    }
+  });
+  
+  // Hide/show section headers
+  document.querySelectorAll('.section-header').forEach(header => {
+    if (section === 'all') {
+      header.style.display = '';
+    } else {
+      const secId = header.id.replace('sec-', '');
+      header.style.display = secId === section ? '' : 'none';
+    }
+  });
+  
+  // Close sidebar on mobile
+  if (window.innerWidth <= 768) {
+    closeSidebar();
+  }
+}
+
+// Search
+function handleSearch() {
+  const query = document.getElementById('search-input').value.toLowerCase().trim();
+  
+  document.querySelectorAll('.poem-card').forEach(card => {
+    const text = card.textContent.toLowerCase();
+    const title = card.querySelector('.poem-title').textContent.toLowerCase();
+    
+    if (!query) {
+      // Reset to current section filter
+      if (currentSection === 'all' || card.dataset.section === currentSection) {
+        card.classList.remove('hidden');
+      }
+    } else {
+      if (title.includes(query) || text.includes(query)) {
+        card.classList.remove('hidden');
+      } else {
+        card.classList.add('hidden');
+      }
+    }
+  });
+  
+  // Also filter nav
+  document.querySelectorAll('.nav-item').forEach(item => {
+    if (!query) {
+      item.classList.remove('hidden');
+    } else {
+      const text = item.textContent.toLowerCase();
+      item.classList.toggle('hidden', !text.includes(query));
+    }
+  });
+}
+
+// Scroll progress
+window.addEventListener('scroll', () => {
+  const scrollTop = window.scrollY;
+  const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+  const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+  document.getElementById('progress-bar').style.width = progress + '%';
+  
+  // Scroll to top button
+  const btn = document.getElementById('scroll-top');
+  btn.classList.toggle('visible', scrollTop > 500);
+  
+  // Update active nav item
+  const cards = document.querySelectorAll('.poem-card:not(.hidden)');
+  let activeNum = null;
+  cards.forEach(card => {
+    const rect = card.getBoundingClientRect();
+    if (rect.top <= 120) {
+      activeNum = card.dataset.num;
+    }
+  });
+  
+  document.querySelectorAll('.nav-item').forEach(item => {
+    item.classList.toggle('active', item.dataset.num === activeNum);
+  });
+});
+
+// Sidebar mobile
+function openSidebar() {
+  document.getElementById('sidebar').classList.add('open');
+  document.getElementById('sidebar-overlay').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeSidebar() {
+  document.getElementById('sidebar').classList.remove('open');
+  document.getElementById('sidebar-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+// Close sidebar on nav click (mobile)
+document.querySelectorAll('.nav-item').forEach(item => {
+  item.addEventListener('click', () => {
+    if (window.innerWidth <= 768) {
+      setTimeout(closeSidebar, 200);
+    }
+  });
+});
+
+// Keyboard shortcuts
+document.addEventListener('keydown', (e) => {
+  if (e.key === '/' && document.activeElement === document.body) {
+    e.preventDefault();
+    document.getElementById('search-input').focus();
+  }
+  if (e.key === 'Escape') {
+    document.getElementById('search-input').blur();
+    document.getElementById('search-input').value = '';
+    handleSearch();
+  }
+});
+
+// Initialize
+document.addEventListener('DOMContentLoaded', () => {
+  // Trigger initial scroll handler
+  window.dispatchEvent(new Event('scroll'));
+});
+</script>
+
+</body>
+</html>
